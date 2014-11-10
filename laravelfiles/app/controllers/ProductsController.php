@@ -36,6 +36,7 @@ class ProductsController extends \BaseController {
 	            $add->name = Input::get('name');
 	            $add->description = Input::get('description');
 	            $add->prix = Input::get('prix');
+	            $add->category_id = Input::get('category');
 	            $files = Input::file('files');
 
 	            if(isset($files[0]) && !empty($files[0]))

@@ -6,17 +6,8 @@ angular.module('productService', [])
 			get : function() {
 				return $http.get('api/categories');
 			},
-			getCategories : function() {
-				return $http.get('../api/categories');
-			},
-			getsubcat : function(){
-				return $http.get('../lateliermac/api/subcategories/');
-			},
-			getsub : function(id){
-				return $http.get('api/getsubcategories/' + id);
-			},
 			getproducts : function(id){
-				return $http.get('http://localhost/lateliermac/getproducts/' + id);
+				return $http.get('http://www.lateliermac.com/getproducts/' + id);
 			},
 			getFollows : function(id){
 				return $http.get('api/getfollows/' + id)
@@ -72,10 +63,7 @@ angular.module('productService', [])
 				return $http.put('api/threads/' + id, updateData);
 			},
 			destroy : function(id) {
-				return $http.delete('http://localhost/lateliermac/api/threads/' + id);
-			},
-			destroySub : function(id) {
-				return $http.delete('../api/subcategories/' + id);
+				return $http.delete('lateliermac/api/threads/' + id);
 			},
 			destroyCat : function(id) {
 				return $http.delete('../api/categories/' + id);

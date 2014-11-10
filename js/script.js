@@ -2,7 +2,6 @@ $(document).ready(function(){
     setTimeout("$('.alert').slideToggle(500);",4000 );
 });
 
-
 $(function(){
     $("#mtn").click(function() {
         $(".socials").hide("normal");
@@ -67,7 +66,7 @@ $(function(){
 
 $(function(){
     $(".contact").click(function() {
-        if(window.location.pathname == '/lateliermac/public/'){
+        if(window.location.pathname == '/lateliermac/'){
             $("#presp").slideToggle("slow");
             $("#contactform").slideToggle("slow");
         }else{

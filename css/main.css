@@ -1150,9 +1150,9 @@ footer{
 }
 
 .social:hover {
- -webkit-transform:scale(1.1);
--moz-transform:scale(1.1);
--o-transform:scale(1.1);
+  -webkit-transform:scale(1.1);
+  -moz-transform:scale(1.1);
+  -o-transform:scale(1.1);
 }
 
 .social {
@@ -1404,6 +1404,7 @@ nav.menu {
     height: 120px;
 }
 .contenu{
+    font-family: 'ADAM';
     width: 33%;
     float: right;
     margin-right: 51%;
@@ -1417,6 +1418,7 @@ nav.menu {
 }
 
 .tags{
+    font-family: 'ADAM';
     color: #000 !important;
 }
 

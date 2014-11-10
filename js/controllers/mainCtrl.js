@@ -43,6 +43,7 @@ angular.module('mainCtrl', [])
 				.success(function(getData){
 					$scope.products = getData;
 					$('.prodindex').fadeIn();
+					$('.carousel').carousel();
 					$('.tab1').fadeIn();
 				})
 				.error(function(data){
@@ -124,11 +125,14 @@ angular.module('mainCtrl', [])
 */
 
 		$scope.editByProductId = function(id){
-			 document.location.href="http://localhost/lateliermac/products/"+id+"/edit";
+			 document.location.href="http://www.lateliermac.com/products/"+id+"/edit";
 		};
 
 		$scope.showByProductId = function(id){
-			 document.location.href="http://localhost/lateliermac/products/"+id;
+			 document.location.href="http://www.lateliermac.com/lateliermac/products/"+id;
+		};
+		$scope.deleteByProductId = function(id){
+			 document.location.href="http://www.lateliermac.com/lateliermac/products/"+id;
 		};
 
 

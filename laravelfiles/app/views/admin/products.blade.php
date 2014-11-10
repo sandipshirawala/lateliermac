@@ -11,10 +11,10 @@
             	<i class="crudadm fa fa-shopping-cart"></i>
 	            <span data-toggle="modal" class="voir btn btn-default btn-sm btn-lg" data-target="#myModal"><i class="fa fa-plus fa-2x"></i></span>
             	<br>
-	            <span id="categories" class="btn btn-default btn-sm" ng-click="getProductsByCat(1)">Ordinateurs</span>
-	            <span class="btn btn-default btn-sm" ng-click="getProductsByCat(2)">Tablettes</span>
-	            <span class="btn btn-default btn-sm" ng-click="getProductsByCat(3)">Pièces détachées</span>
-	            <span class="btn btn-default btn-sm" ng-click="getProductsByCat(4)">Accéssoires</span>
+	            <span id="categories" class="btn btn-default" ng-click="getProductsByCat(1)">Macs</span>
+	            <span class="btn btn-default" ng-click="getProductsByCat(2)">iPads</span>
+	            <span class="btn btn-default" ng-click="getProductsByCat(3)">Pièces détachées</span>
+	            <span class="btn btn-default" ng-click="getProductsByCat(4)">Accéssoires</span>
             </span>
             <hr />
         </div>
@@ -52,6 +52,15 @@
 				<div class="modal-body">
 					<div>
 						{{ Form::open(array('url' => 'admin/products' , 'enctype'=>'multipart/form-data')) }}
+							<div class="form-group">
+								<label for="category">Catégorie</label>
+								<select name="category" id="category" class="form-control">
+									<option value="1">Macs</option>
+									<option value="2">iPads</option>
+									<option value="3">Pièces détachées</option>
+									<option value="4">Accéssoires</option>
+								</select>
+							</div>
 							<div class="form-group">
 								<label for="namep">Nom</label>
 								<input type="text" id="namep" class="form-control" name="name" placeholder="iMac, Macbook..">

@@ -5,10 +5,10 @@
     <div class="categoriesmenu">
         <div class="list-group">
             <span class="list-group-item" ng-click="getProductsByCat(1)">
-                <i class="flaticon-imac"></i> Ordinateurs
+                <i class="flaticon-imac"></i> Macs
             </span>
             <span href="#" class="list-group-item" ng-click="getProductsByCat(2)">
-                <i class="flaticon-computer71"></i> Tablettes
+                <i class="flaticon-computer71"></i> iPads
             </span>
             <span href="#" class="list-group-item" ng-click="getProductsByCat(3)">
                 <i class="flaticon-settings48"></i> Pièces détachées

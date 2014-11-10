@@ -20,7 +20,7 @@ class UsersController extends \BaseController {
 
 	public function postLogin(){
 		if(Auth::attempt(array('username'=>Input::get('username'), 'password'=>Input::get('password')))) {
-    	    return Redirect::to('admin')->with('message', 'Bienvenue <b>'.Auth::user()->username.'</b> !');
+    	    return Redirect::to('admin')->with('message', 'Bienvenue <b>Papa</b> !');
 		}else{
     		return Redirect::to('login')
 	        ->with('error', 'Votre username/password est incorrect !')
