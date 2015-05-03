@@ -7,7 +7,12 @@ class Contact extends Eloquent{
 	public static $rules = [
 		'service' => 'required',
         'email'	  => 'required|email',
+<<<<<<< HEAD
         'author'  => 'required'
+=======
+        'author'  => 'required',
+        'contenu' => 'required'
+>>>>>>> cba00a42a2a4947d725fd367f45b2c8d4f56f744
     ];
 
 

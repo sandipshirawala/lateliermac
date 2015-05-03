@@ -23,6 +23,7 @@
                 <thead>
                     <tr>
                         <th>ID</th>
+<<<<<<< HEAD
                         <th>Prix</th>
                         <th>Nom</th>
                         <th>Actions</th>
@@ -30,12 +31,25 @@
                 </thead>
                 <tbody id="sortable" ui-sortable="sortableOptions" ng-model="products">
                     <tr id="<% product.id %>" class="tr" ng-repeat="product in products">
+=======
+                        <th>Nom</th>
+                        <th>Prix</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="tr" ng-repeat="product in products">
+>>>>>>> cba00a42a2a4947d725fd367f45b2c8d4f56f744
                         <td><% product.id %></td>
                         <td><% product.prix %></td>
                         <td><% product.name %></td>
                         <td class="actions">
                             <span class="crudadm fa fa-pencil" ng-click="editByProductId(product.id)"></span> &nbsp;
+<<<<<<< HEAD
                             <span class="crudadm fa fa-remove" ng-click="deleteByProductId(product.id)"></span>
+=======
+                            <a class="crudadm fa fa-remove" onclick="return confirm('Voulez-vous vraiment supprimer ce produit ?);" href=""></a>
+>>>>>>> cba00a42a2a4947d725fd367f45b2c8d4f56f744
                         </td>
                     </tr>
                 </tbody>
@@ -89,6 +103,7 @@
 			</div>
 		</div>
 	</div>
+<<<<<<< HEAD
 	<script>
 	$(document).ready(function () {
 		$('#sortable').sortable({
@@ -106,3 +121,6 @@
 	});
 	</script>
 @stop
+=======
+@stop
+>>>>>>> cba00a42a2a4947d725fd367f45b2c8d4f56f744

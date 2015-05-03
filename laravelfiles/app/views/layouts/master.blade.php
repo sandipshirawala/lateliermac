@@ -6,17 +6,24 @@
         <meta name="description" content="Entretien et réparation d'ordinateurs mac (apple), vente et achat de matériel d'occasion pour mac à Montélimar 26200 Drôme.">
         <meta name="keywords" content="mac,apple,atelier,montelimar,reparation,ordinateur,achat,vente,26,drome,iphone,ipad,imac,macbook,repare,piece,detachees,macbookpro,air,iMac,iPad,occasion,26,drôme,montélimar,place,des,clercs,place des clercs,boutique apple,magasin apple,réparation apple,vente apple,achat apple,assistance apple,assistance mac,mac ">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+<<<<<<< HEAD
         <link rel="stylesheet" href="http://www.lateliermac.com/fancybox/source/jquery.fancybox.css" type="text/css" media="screen" />
         <link rel="icon" href="img/atelierpng.ico" />
+=======
+>>>>>>> cba00a42a2a4947d725fd367f45b2c8d4f56f744
         {{HTML::style('css/bootstrap.css') }}
         {{HTML::style('css/main.css') }}
         <!-- LIBS -->
         {{HTML::script('js/jquery.js')}}
         {{HTML::script('js/bootstrap.js') }}
+<<<<<<< HEAD
         <script src="http://www.lateliermac.com/fancybox/source/jquery.fancybox.js"></script>
         <script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
         {{HTML::script('js/angular.min.js') }}
         {{HTML::script('js/services/sortable.js') }}
+=======
+        {{HTML::script('js/angular.min.js') }}
+>>>>>>> cba00a42a2a4947d725fd367f45b2c8d4f56f744
         <!-- SCRIPTS -->
         {{HTML::script('js/script.js') }}
         {{HTML::script('js/controllers/mainCtrl.js') }}
@@ -25,7 +32,11 @@
 
     </head>
     <body ng-app="productApp" ng-controller="mainController">
+<<<<<<< HEAD
         @if(Session::has('message'))
+=======
+         @if(Session::has('message'))
+>>>>>>> cba00a42a2a4947d725fd367f45b2c8d4f56f744
             <p class="text-center alert alert-success">{{ Session::get('message') }}</p>
         @elseif(Session::has('error'))
             <p class="text-center alert alert-danger">{{ Session::get('error') }}</p>
@@ -42,7 +53,11 @@
                         <ul>
                             <li data-target-id=""><a href="{{ URL::to('/') }}">Accueil &nbsp; <i class="fa fa-home fa-2x"></i></a></li>
                             <li data-target-id=""><a class="contact">Contact &nbsp; <i class="fa fa-envelope fa-2x"></i></a></li>
+<<<<<<< HEAD
                             <li data-target-id=""><a href="{{ URL::to('products') }}">ACHAT / VENTE &nbsp;<i class="fa fa-shopping-cart fa-2x"></i></a></li>
+=======
+                            <li data-target-id=""><a href="{{ URL::to('products') }}">Produits &nbsp;<i class="fa fa-shopping-cart fa-2x"></i></a></li>
+>>>>>>> cba00a42a2a4947d725fd367f45b2c8d4f56f744
                         </ul>
                     </nav>
             </header>
@@ -64,7 +79,11 @@
                                 <div class="form-group">
                                   <label class="col-md-3 control-label" for="name">Service</label>
                                   <div class="col-md-9">
+<<<<<<< HEAD
                                     <select name="service" id="service" class="form-control">
+=======
+                                    <select name="service" id="service">
+>>>>>>> cba00a42a2a4947d725fd367f45b2c8d4f56f744
                                         <option value="commercial">Service commercial</option>
                                         <option value="technique">Service technique</option>
                                         <option value="distance">Assistance à distance</option>
@@ -75,21 +94,33 @@
                                 <div class="form-group">
                                   <label class="col-md-3 control-label" for="name">Nom</label>
                                   <div class="col-md-9">
+<<<<<<< HEAD
                                     <input id="name" name="author" type="text" placeholder="Votre nom" class="form-control" required>
+=======
+                                    <input id="name" name="author" type="text" placeholder="Votre nom" class="form-control">
+>>>>>>> cba00a42a2a4947d725fd367f45b2c8d4f56f744
                                   </div>
                                 </div>
                                 <!-- Email input-->
                                 <div class="form-group">
                                   <label class="col-md-3 control-label" for="email">Mail</label>
                                   <div class="col-md-9">
+<<<<<<< HEAD
                                     <input id="email" name="email" type="email"  placeholder="Votre adresse email" class="form-control" required>
+=======
+                                    <input id="email" name="email" type="email"  placeholder="Votre adresse email" class="form-control">
+>>>>>>> cba00a42a2a4947d725fd367f45b2c8d4f56f744
                                   </div>
                                 </div>
                                 <!-- Message body -->
                                 <div class="form-group">
                                   <label class="col-md-3 control-label" for="message">Message</label>
                                   <div class="col-md-9">
+<<<<<<< HEAD
                                     <textarea class="form-control" required id="message" name="message" placeholder="Votre message ici" rows="5"></textarea>
+=======
+                                    <textarea class="form-control" id="message" name="message" placeholder="Votre message ici" rows="5"></textarea>
+>>>>>>> cba00a42a2a4947d725fd367f45b2c8d4f56f744
                                   </div>
                                 </div>
                                 <!-- Form actions -->
@@ -112,10 +143,14 @@
         </div>
         <div class="footer-container">
             <footer>
+<<<<<<< HEAD
                 <p class="footcont">
                     <small>SAS/U Djecha / RCS Romans - 803980515 - l'aTelier mAc &copy; - 26 Place des Clercs 26200 MONTÉLIMAR </small><br>
                     <small id="copydev"><a target="_blank" href="http://www.chalasdev.altervista.org" class="chalasdev">Création par Robin CHALAS - Développeur Web &copy;</a></small>
                 </p>
+=======
+                <p><strong>SAS/U Djecha / RCS Romans - 803980515 - l'aTelier mAc &copy; - 26 Place des Clercs 26200 MONTÉLIMAR </strong></p>
+>>>>>>> cba00a42a2a4947d725fd367f45b2c8d4f56f744
             </footer>
         </div>
         <!-- ShareThis-->

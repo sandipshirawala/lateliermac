@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 * {
   margin: 0;
   padding: 0;
@@ -200,3 +201,207 @@ input[type="submit"]:hover {
   position:relative;
   top:1px;
 }
+=======
+* {
+  margin: 0;
+  padding: 0;
+}
+
+@font-face
+{
+  font-family: "ADAM";
+  src:url('ADAM.CG PRO.otf');
+}
+
+body {
+  background: url(../img/young-couple-blur.jpg) no-repeat top center;
+  color: #931FB5;
+  font-family:"ADAM";
+}
+
+p
+{
+  text-align: center;
+  font-size: 50px;
+}
+h2 {
+  color: #FF6755;
+  font-family: "ADAM";
+  font-size: 200px;
+  font-weight: bold;
+  
+  text-align: center;
+  margin-top: 20px;
+}
+
+a {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.login {
+  width: 350px;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  margin-left: -175px;
+}
+
+.log
+{
+  text-align: center;
+}
+
+input[type="text"], input[type="password"] {
+  width: 350px;
+  padding: 20px 0px;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #FFFFFF;
+  outline: none;
+  color: #FFFFFF;
+  font-size: 17px;
+}
+input[type=checkbox] {
+  display: none;
+}
+
+{
+  color: yellow;
+}
+
+.checkboxTwo {
+  width: 120px;
+  height: 40px;
+  background: #333;
+  margin: 20px 60px;
+
+  border-radius: 50px;
+  position: relative;
+}
+
+.checkboxTwo:before {
+  content: '';
+  position: absolute;
+  top: 19px;
+  left: 14px;
+  height: 2px;
+  width: 90px;
+  background: #111;
+}
+
+.checkboxTwo label {
+  display: block;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+
+  -webkit-transition: all .5s ease;
+  -moz-transition: all .5s ease;
+  -o-transition: all .5s ease;
+  -ms-transition: all .5s ease;
+  transition: all .5s ease;
+  cursor: pointer;
+  position: absolute;
+  top: 9px;
+  z-index: 1;
+  left: 12px;
+  background: #ddd;
+}
+
+.checkboxTwo input[type=checkbox]:checked + label {
+  left: 84px;
+  background: #26ca28;
+}
+
+input[type="submit"] {
+  background: #381342;
+  border: 0;
+  width: 350px;
+  height: 40px;
+  border-radius: 3px;
+  color: black;
+  font-size: 15px;
+  cursor: pointer;
+
+  transition: background 0.3s ease-in-out;
+}
+input[type="submit"]:hover {
+  background: #FF0822;
+  animation-name: shake;
+}
+
+.forgot {
+  margin-top: 30px;
+  display: block;
+  font-size: 11px;
+  text-align: center;
+  font-weight: bold;
+}
+.forgot:hover {
+  margin-top: 30px;
+  display: block;
+  font-size: 11px;
+  text-align: center;
+  font-weight: bold;
+  color: #6d7781;
+}
+
+.agree {
+  padding: 30px 0px;
+  font-size: 12px;
+  text-indent: 25px;
+  line-height: 15px;
+}
+
+::-webkit-input-placeholder {
+  color: #435160;
+  font-size: 12px;
+}
+
+.animated {
+  animation-fill-mode: both;
+  animation-duration: 1s;
+}
+
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+
+  10%, 30%, 50%, 70%, 90% {
+    transform: translateX(-10px);
+  }
+
+  20%, 40%, 60%, 80% {
+    transform: translateX(10px);
+  }
+}
+
+
+.myButton {
+  background-color:#28032e;
+  -moz-border-radius:2px;
+  -webkit-border-radius:2px;
+  border-radius:2px;
+  border:1px solid ##931fb5;
+  display:inline-block;
+  cursor:pointer;
+  color:#ff6755;
+  font-family:arial;
+  font-size:28px;
+  padding:26px 76px;
+  text-decoration:none;
+  text-shadow:-1px 0px 50px #2b665e;
+  font-family: ADAM;
+  transition:1s;
+}
+.myButton:hover {
+  background-color:#ff0822;
+  transition:0.3s;
+}
+.myButton:active {
+  position:relative;
+  top:1px;
+}
+>>>>>>> cba00a42a2a4947d725fd367f45b2c8d4f56f744

@@ -23,8 +23,11 @@ Route::post('postlogin', ['uses' => 'UsersController@postLogin', 'as' => 'postlo
 
 //Contact
 Route::post('contact', ['uses' => 'AdminController@contact', 'as' => 'contact']);
+<<<<<<< HEAD
 Route::post('contactprod', ['uses' => 'AdminController@contactProduct', 'as' => 'contactprod']);
 Route::post('reorder', ['uses' => 'ProductsController@sort', 'as' => 'sort']);
+=======
+>>>>>>> cba00a42a2a4947d725fd367f45b2c8d4f56f744
 
 //Admin
 Route::group(['before' => 'auth', 'prefix' => 'admin'], function(){
@@ -33,7 +36,10 @@ Route::group(['before' => 'auth', 'prefix' => 'admin'], function(){
 	Route::get('products', ['uses' => 'AdminController@getProducts', 'as' => 'products']);
 	Route::post('products', ['uses' => 'ProductsController@store', 'as' => 'store']);
 	Route::get('/', ['uses' => 'AdminController@index', 'as' => 'panel']);
+<<<<<<< HEAD
 	Route::get('getproducts/{id}', ['uses' => 'ProductsController@getProductsByCategory'])->where('id', $id);
+=======
+>>>>>>> cba00a42a2a4947d725fd367f45b2c8d4f56f744
 });
 //Produits
 Route::get('getproducts/{id}', ['uses' => 'ProductsController@getProductsByCategory'])->where('id', $id);

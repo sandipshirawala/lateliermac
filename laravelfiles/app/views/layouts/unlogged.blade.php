@@ -9,7 +9,10 @@
         {{HTML::style('css/bootstrap.css') }}
         {{HTML::style('css/main.css') }}
         {{HTML::style('css/unlog.css') }}
+<<<<<<< HEAD
         <link rel="icon" href="http://lateliermac.com/img/atelierpng.ico" />
+=======
+>>>>>>> cba00a42a2a4947d725fd367f45b2c8d4f56f744
     </head>
     <body>
         <div id="wrapper">

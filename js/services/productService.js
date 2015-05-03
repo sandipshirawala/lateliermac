@@ -7,10 +7,14 @@ angular.module('productService', [])
 				return $http.get('api/categories');
 			},
 			getproducts : function(id){
+<<<<<<< HEAD
 				return $http.get('getproducts/' + id);
 			},
 			getadmproducts : function(id){
 				return $http.get('../admin/getproducts/' + id);
+=======
+				return $http.get('http://www.lateliermac.com/getproducts/' + id);
+>>>>>>> cba00a42a2a4947d725fd367f45b2c8d4f56f744
 			},
 			getFollows : function(id){
 				return $http.get('api/getfollows/' + id)
@@ -73,4 +77,8 @@ angular.module('productService', [])
 			}
 		}
 
+<<<<<<< HEAD
 	});
+=======
+	});
+>>>>>>> cba00a42a2a4947d725fd367f45b2c8d4f56f744

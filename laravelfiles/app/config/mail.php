@@ -28,7 +28,11 @@ return array(
 	|
 	*/
 
+<<<<<<< HEAD
 	'host' => 'ssl0.ovh.net',
+=======
+	'host' => 'smtp.gmail.com',
+>>>>>>> cba00a42a2a4947d725fd367f45b2c8d4f56f744
 
 	/*
 	|--------------------------------------------------------------------------
@@ -54,7 +58,11 @@ return array(
 	|
 	*/
 
+<<<<<<< HEAD
 	'from' => array('address' => 'contact@lateliermac.com', 'name' => 'lateliermac'),
+=======
+	'from' => array('address' => 'robin.chalas@gmail.com', 'name' => 'chalas_r'),
+>>>>>>> cba00a42a2a4947d725fd367f45b2c8d4f56f744
 
 	/*
 	|--------------------------------------------------------------------------
@@ -80,7 +88,11 @@ return array(
 	|
 	*/
 
+<<<<<<< HEAD
 	'username' => 'contact@lateliermac.com',
+=======
+	'username' => 'robin.chalas@gmail.com',
+>>>>>>> cba00a42a2a4947d725fd367f45b2c8d4f56f744
 
 	/*
 	|--------------------------------------------------------------------------
@@ -93,7 +105,11 @@ return array(
 	|
 	*/
 
+<<<<<<< HEAD
 	'password' => 'Latelier26',
+=======
+	'password' => 'mohandas26',
+>>>>>>> cba00a42a2a4947d725fd367f45b2c8d4f56f744
 
 	/*
 	|--------------------------------------------------------------------------

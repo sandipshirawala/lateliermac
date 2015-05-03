@@ -151,7 +151,11 @@
 .navbtn {padding-left: 10px !important;}
 .sidebar-nav li a{padding-left:27px;}
 .macbk{margin-left: 420px;height: 798px;background: url(../img/maco.png) 0 0 no-repeat;}
+<<<<<<< HEAD
 .productlist{width: 823px;height: 477px;margin-top: -734px;margin-left: 601px;padding-left: 0%;overflow: auto;}
+=======
+.productlist{width: 823px;height: 477px;margin-top: -734px;margin-left: 601px;padding-left: 0%;}
+>>>>>>> cba00a42a2a4947d725fd367f45b2c8d4f56f744
 .last10{margin-left: 38%;margin-right: 22%;}
 .linkpag{position:absolute;margin:20%;}
 .navbtn {padding-left: 10px !important;}
@@ -170,4 +174,8 @@
 
 .tr:hover{
   background-color: #e9e9e9;
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> cba00a42a2a4947d725fd367f45b2c8d4f56f744

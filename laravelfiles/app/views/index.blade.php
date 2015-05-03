@@ -6,6 +6,7 @@
     <div class="main clearfix">
         <div class="imac">
             <ul class="socials horizontal-list categomac">
+<<<<<<< HEAD
                 <div class='top-bar resp-bar'>
                     <div class='circles'>
                         <div id="close-circle" class="closemen circle"></div>
@@ -44,6 +45,34 @@
                         <span class="navigation"><span class="servlink" id="pannefb" > SERVICES </span> <i class="menlink fa fa-chevron-right fa-2x"></i>  MAINTENANCE</span>
                     </div>
                 </div>
+=======
+            <b>
+                <li data-target-id="1" id="mtn" class="menulistt facebook">
+                  <p class="icon"><span><a class="mtnance btn btn-default" href="#mtn" data-toggle="tooltip" data-placement="bottom" title="En savoir +">
+                  <b>MAINTENANCE &nbsp;<i class="glyphicon glyphicon-wrench"></i></b></a></span>
+                  </p>
+                  <p class="number" data-id="1" >ENTRETIEN <br> REPARATION <br> CONFIGURATION <br> ASSISTANCE</p>
+                  <br><a href="#aside2" class="devis" data-toggle="tooltip" data-placement="top" title="Bientôt disponible">DEVIS EN LIGNE</a>
+                </li>
+                <li data-target-id="2" id="vert" class="menulistt mailbox">
+                  <p class="icon"><span><a class="mtnance btn btn-default" href="#vert" data-toggle="tooltip" data-placement="bottom" title="En savoir +"><b>ACHAT &nbsp;<i class="fa fa-cc-visa fa-2x"></i></b></a></span></p>
+                  <p class="number" data-id="2" >&nbsp; <br> D'OCCASION <br> ENDOMMAGÉ <br> &nbsp;</p>
+                </li>
+                <li data-target-id="3" id="rouge" class="menulistt googleplus">
+                  <p class="icon"><span><a class="mtnance btn btn-default" href="#rouge" data-toggle="tooltip" data-placement="bottom" title="En savoir +"><b>VENTE &nbsp;<i class="glyphicon glyphicon-euro"></i></b></a></span></p>
+                  <p class="number" data-id="3" > &nbsp; <br> D'OCCASION <br> RECONDITIONNÉ <br> &nbsp;</p>
+                </li>
+                <li data-target-id="4" id="turquoise" class="menulistt twitter">
+                  <p class="icon"><span><a class="mtnance btn btn-default" href="#turquoise" data-toggle="tooltip" data-placement="bottom" title="En savoir +"><b>E-COMMERCE &nbsp;<i class="glyphicon glyphicon-shopping-cart"></i></b></a></span></p>
+                  <p class="ecom number" data-id="4"> &nbsp; <br> VENTE EN LIGNE <br> </b> <span id="biendisp">BIENTÔT DISPONIBLE</span>&nbsp;</p>
+                </li>
+            </b>
+            </ul>
+            <section class="pannefb">
+                <h3 class="headcat">MAINTENANCE <i class="glyphicon glyphicon-wrench"></i> <a id="pannefb" href="#pannefb" class="closesect glyphicon glyphicon-remove"></a></h3 class="headcat">
+                <p class="number" data-target-id="" ><b><span class="ateliermac">l'aTelier mAc</span> assure l'entretien, la configuration, l'assistance et les réparations pour votre Mac.</b></p>
+
+>>>>>>> cba00a42a2a4947d725fd367f45b2c8d4f56f744
                 <div class="cat-mtn panel-group" id="accordion">
                   <div class="panel panel-default">
                     <div class="headpan panel-heading">
@@ -55,7 +84,11 @@
                     </div>
                     <div id="collapseOne" class="panel-collapse collapse">
                       <div class="panel-body">
+<<<<<<< HEAD
                         <b>L'Atelier</b> assure tous les travaux nécessaires à l'entretien de votre machine,  Appellez-nous, remplissez le formulaire de <b><a title="Accéder au formulaire" class="toolcon contact" href="#">contact</a></b> / <b><a title="Bientôt disponible" class="tooldev devis" href="#">devis</a></b> ou présentez vous directement à l'Atelier
+=======
+                        <b>L'Atelier</b> assure tous les travaux nécessaires à l'entretien de votre machine,  Appellez-nous, remplissez le formulaire de <b><a data-toggle="tooltip" data-placement="top" title="Accéder au formulaire" class="toolcon contact" href="#aside2">contact</a></b> / <b><a data-toggle="tooltip" data-placement="top" title="Bientôt disponible" class="tooldev devis" href="#aside2">devis</a></b> ou présentez vous directement à l'Atelier
+>>>>>>> cba00a42a2a4947d725fd367f45b2c8d4f56f744
                       </div>
                     </div>
                   </div>
@@ -67,9 +100,15 @@
                         </a>
                       </h4>
                     </div>
+<<<<<<< HEAD
                     <div id="collapseTwo" class="panel-collapse collapse in">
                       <div class="panel-body">
                         Appellez-nous, remplissez le formulaire de <b><a title="Accéder au formulaire" class="toolcon contact" href="#">contact</a></b> / <b><a title="Bientôt disponible" class="tooldev devis" href="#">devis</a></b> afin de connaître les possibilités et le montant total des travaux à éffectuer, ou présentez vous directement à l'Atelier.
+=======
+                    <div id="collapseTwo" class="panel-collapse collapse">
+                      <div class="panel-body">
+                        Appellez-nous, remplissez le formulaire de <b><a data-toggle="tooltip" data-placement="top" title="Accéder au formulaire" class="toolcon contact" href="#aside2">contact</a></b> / <b><a data-toggle="tooltip" data-placement="top" title="Bientôt disponible" class="tooldev devis" href="#aside2">devis</a></b> afin de connaître les possibilités et le montant total des travaux à éffectuer, ou présentez vous directement à l'Atelier.
+>>>>>>> cba00a42a2a4947d725fd367f45b2c8d4f56f744
                       </div>
                     </div>
                   </div>
@@ -80,10 +119,17 @@
                           CONFIGURATION
                         </a>
                       </h4>
+<<<<<<< HEAD
                   </div>
                     <div id="collapseThree" class="panel-collapse collapse">
                       <div class="panel-body">
                         Appellez-nous ou remplissez le formulaire de <b><a title="Accéder au formulaire" class="toolcon contact" href="#">contact</a></b> / <b><a title="Bientôt disponible" class="tooldev devis" href="#">devis</a></b> afin de nous confier votre produit pour qu'on y effectue les manoeuvres nécessaires.
+=======
+                    </div>
+                    <div id="collapseThree" class="panel-collapse collapse">
+                      <div class="panel-body">
+                        Appellez-nous ou remplissez le formulaire de <b><a data-toggle="tooltip" data-placement="top" title="Accéder au formulaire" class="toolcon contact" href="#aside2">contact</a></b> / <b><a data-toggle="tooltip" data-placement="top" title="Bientôt disponible" class="tooldev devis" href="#aside2">devis</a></b> afin de nous confier votre produit pour qu'on y effectue les manoeuvres nécessaires.
+>>>>>>> cba00a42a2a4947d725fd367f45b2c8d4f56f744
                       </div>
                     </div>
                   </div>
@@ -103,6 +149,7 @@
                   </div>
                 </div>
             </section>
+<<<<<<< HEAD
              <section class="onglets vert">
                  <div class='top-bar'>
                      <div class='circles'>
@@ -112,6 +159,10 @@
                          <span class="navigation"><span id="2" class="servlink"> SERVICES </span> <i class="menlink fa fa-chevron-right fa-2x"></i>  ACHAT <span class='dim1'>DE MATÉRIEL</span></span>
                      </div>
                  </div>
+=======
+             <section class="vert">
+                <h3 class="headcat">ACHAT DE MATÉRIEL &nbsp;<i class="glyphicon glyphicon-credit-card"></i> <a id="2" href="#aside2" class="closesect2 glyphicon glyphicon-remove"></a></h3 class="headcat">
+>>>>>>> cba00a42a2a4947d725fd367f45b2c8d4f56f744
                 <div class="cat-mtn panel-group" id="accordion">
                   <div class="panel panel-default">
                     <div class="headpan panel-heading">
@@ -142,6 +193,7 @@
                       <div class="modal-body">
                         <div>
                           {{ Form::open(array('url' => 'contactprod' , 'enctype'=>'multipart/form-data')) }}
+<<<<<<< HEAD
                           <div class="form-group">
                               <label class="col-md-3 control-label" for="name">Nom</label>
                               <div class="col-md-9">
@@ -166,6 +218,19 @@
                             <div class="form-group">
                               <label for="textadesc">Description</label>
                               <textarea class="form-control" required id="textadesc" name="description" cols="30" rows="5" placeholder="etat, configuration.."></textarea>
+=======
+                            <div class="form-group">
+                              <label for="namep">Nom</label>
+                              <input type="text" id="namep" class="form-control" name="name" placeholder="iMac, Macbook..">
+                            </div>
+                            <div class="form-group">
+                              <label for="price">Prix</label>
+                              <input type="text" id="price" class="form-control" name="prix" placeholder="ex: 550">
+                            </div>
+                            <div class="form-group">
+                              <label for="textadesc">Description</label>
+                              <textarea class="form-control" id="textadesc" name="description" cols="30" rows="5" placeholder="etat, configuration.."></textarea>
+>>>>>>> cba00a42a2a4947d725fd367f45b2c8d4f56f744
                             </div>
                             <div class="form-group">
                               <label for="namep">Photos</label>
@@ -184,6 +249,7 @@
                   </div>
                 </div>
             </section>
+<<<<<<< HEAD
              <section class="onglets rouge">
                  <div class='top-bar'>
                      <div class='circles'>
@@ -193,6 +259,10 @@
                          <span class="navigation"><span id="3" class="servlink"> SERVICES </span> <i class="menlink fa fa-chevron-right fa-2x"></i>  VENTE <span class='dim2'>DE MATÉRIEL</span></span>
                      </div>
                  </div>
+=======
+             <section class="rouge">
+                <h3 class="headcat">VENTE DE MATÉRIEL&nbsp;<i class="glyphicon glyphicon-euro"></i> <a id="3" href="#aside2" class="closesect2 glyphicon glyphicon-remove"></a></h3 class="headcat">
+>>>>>>> cba00a42a2a4947d725fd367f45b2c8d4f56f744
                 <div class="cat-mtn panel-group" id="accordion">
                   <div class="panel panel-default">
                     <div class="headpan panel-heading">
@@ -207,7 +277,11 @@
                             À l'Atelier, nous vendons tous les produits adaptés aux ordinateurs Apple, allant des accéssoires aux pièces principales, selon les disponibilités (produits d'occasion ou reconditionnés).
                             <br>Vous pouvez consulter nos produits en ligne via notre <b><a href="{{ URL::to('products') }}">e-boutique</a></b>. <br>
                             En attendant, venez directement nous rendre visite au <b>26 Place des Clercs</b> à <b>Montélimar</b> , <br>
+<<<<<<< HEAD
                             ou contactez nous par téléphone ou via le formulaire de <a class="contact" href="#">contact</a> en précisant l'objet de votre message.
+=======
+                            ou contactez nous par téléphone ou via le formulaire de <a class="contact" href="#aside2">contact</a> en précisant l'objet de votre message.
+>>>>>>> cba00a42a2a4947d725fd367f45b2c8d4f56f744
                             <br>
                             À bientôt chez <b>l'aTelier mAc</b> !
                       </div>
@@ -215,6 +289,7 @@
                   </div>
                 </div>
             </section>
+<<<<<<< HEAD
              <section class="onglets turquoise">
                  <div class='top-bar'>
                      <div class='circles'>
@@ -224,6 +299,10 @@
                          <span class="navigation"><span id="4" class="servlink"> SERVICES </span> <i class="menlink fa fa-chevron-right fa-2x"></i>  E-COMMERCE</span>
                      </div>
                  </div>
+=======
+             <section class="turquoise">
+                <h3 class="headcat">E-COMMERCE &nbsp;<i class="glyphicon glyphicon-shopping-cart"></i> <a id="4" href="#aside2" class="closesect glyphicon glyphicon-remove"></a></h3 class="headcat">
+>>>>>>> cba00a42a2a4947d725fd367f45b2c8d4f56f744
                     <p class="ecom"><b><em>DISPONIBLE TRÈS PROCHAINEMENT</em></b></p>
             </section>
         </div>
@@ -238,9 +317,15 @@
                         mais aussi pour les autres produits de la marque.</b></p>
                     <p><b>Juste parce-que nous pouvons faire différement, à des prix raisonnables et des délais corrects</b></p>
                     <div class="boutonspop">
+<<<<<<< HEAD
                       <a id="horaires" class="btn btn-default" href="#"><b>Horaires </b><i class="fa fa-clock-o"></i></a>
                       <a id="coord" class="btn btn-default" href="#"><b>Coordonnées </b><i class="fa fa-fax"></i></a>
                       <a id="plan" class="btn btn-default" href="#" onclick="open_map();"><b>Plan </b><i class="fa fa-location-arrow"></i></a>
+=======
+                      <a id="horaires" class="btn btn-default" href="#aside2"><b>Horaires </b><i class="fa fa-clock-o"></i></a>
+                      <a id="coord" class="btn btn-default" href="#aside2"><b>Coordonnées </b><i class="fa fa-fax"></i></a>
+                      <a id="plan" class="btn btn-default" href="#aside2" onclick="open_map();"><b>Plan </b><i class="fa fa-location-arrow"></i></a>
+>>>>>>> cba00a42a2a4947d725fd367f45b2c8d4f56f744
                     </div>
                     <div class="pophoraires">
                         <p class="ho-title"><b><i class="fa fa-clock-o"></i> HORAIRES </b></p>
@@ -268,8 +353,13 @@
                   <div class="col-md-6">
                     <div >
                     {{ Form::open(array('url'=>'contact', 'method' => 'post', 'class' => 'form-horizontal')) }}
+<<<<<<< HEAD
 
                         <legend class="text-center"><i class="envcont fa fa-envelope"></i>&nbsp;Contact<a id="closecontact" href="#" class="closeform glyphicon glyphicon-remove"></a></legend>
+=======
+                      <fieldset>
+                        <legend class="text-center"><i class="envcont fa fa-envelope"></i>&nbsp;Contact<a id="closecontact" href="#aside2" class="closeform glyphicon glyphicon-remove"></a></legend>
+>>>>>>> cba00a42a2a4947d725fd367f45b2c8d4f56f744
 
                         <div class="form-group">
                           <label class="col-md-3 control-label" for="name">Service</label>
@@ -285,21 +375,34 @@
                         <div class="form-group">
                           <label class="col-md-3 control-label" for="name">Nom</label>
                           <div class="col-md-9">
+<<<<<<< HEAD
                             <input id="name" name="author" type="text" placeholder="Votre nom" class="form-control" required>
+=======
+                            <input id="name" name="author" type="text" placeholder="Votre nom" class="form-control">
+>>>>>>> cba00a42a2a4947d725fd367f45b2c8d4f56f744
                           </div>
                         </div>
                         <!-- Email input-->
                         <div class="form-group">
                           <label class="col-md-3 control-label" for="email">Mail</label>
                           <div class="col-md-9">
+<<<<<<< HEAD
                             <input id="email" name="email" type="email"  placeholder="Votre adresse email" class="form-control" required>
                         </div>
+=======
+                            <input id="email" name="email" type="email"  placeholder="Votre adresse email" class="form-control">
+                          </div>
+>>>>>>> cba00a42a2a4947d725fd367f45b2c8d4f56f744
                         </div>
                         <!-- Message body -->
                         <div class="form-group">
                           <label class="col-md-3 control-label" for="message">Message</label>
                           <div class="col-md-9">
+<<<<<<< HEAD
                             <textarea class="form-control" required id="message" name="message" placeholder="Votre message ici" rows="5"></textarea>
+=======
+                            <textarea class="form-control" id="message" name="message" placeholder="Votre message ici" rows="5"></textarea>
+>>>>>>> cba00a42a2a4947d725fd367f45b2c8d4f56f744
                           </div>
                         </div>
                         <!-- Form actions -->
@@ -308,6 +411,10 @@
                             <button type="submit" class="btn btn-primary btn-lg">Envoyer</button>
                           </div>
                         </div>
+<<<<<<< HEAD
+=======
+                      </fieldset>
+>>>>>>> cba00a42a2a4947d725fd367f45b2c8d4f56f744
                       {{ Form::close() }}
                     </div>
                   </div>
@@ -323,4 +430,8 @@
     </div>
 </div>
 
+<<<<<<< HEAD
 @stop
+=======
+@stop
+>>>>>>> cba00a42a2a4947d725fd367f45b2c8d4f56f744

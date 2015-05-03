@@ -8,12 +8,16 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         {{HTML::style('css/bootstrap.css') }}
         {{HTML::style('css/admin.css') }}
+<<<<<<< HEAD
         <link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
         <link rel="icon" href="http://lateliermac.com/img/atelierpng.ico" />
+=======
+>>>>>>> cba00a42a2a4947d725fd367f45b2c8d4f56f744
         <!-- LIBS -->
         {{HTML::script('js/jquery.js')}}
         {{HTML::script('js/bootstrap.js') }}
         {{HTML::script('js/angular.min.js') }}
+<<<<<<< HEAD
         <script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
         {{HTML::script('js/services/sortable.js') }}
         <script>
@@ -22,6 +26,8 @@
             $("#sortable" ).disableSelection();
         });
         </script>
+=======
+>>>>>>> cba00a42a2a4947d725fd367f45b2c8d4f56f744
         <!-- SCRIPTS -->
         {{HTML::script('js/admin.js') }}
         {{HTML::script('js/script.js') }}

@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 ﻿<?php
+=======
+<?php
+>>>>>>> cba00a42a2a4947d725fd367f45b2c8d4f56f744
 
 class ProductsController extends \BaseController {
 
@@ -53,12 +57,20 @@ class ProductsController extends \BaseController {
 						$path = public_path(strtolower('uploads'.DIRECTORY_SEPARATOR.$add->id));
 						$filename = strtolower($file->getClientOriginalName());
 						$file->move($path, $filename);
+<<<<<<< HEAD
 						Product::resize(public_path(strtolower('uploads'.DIRECTORY_SEPARATOR.$add->id.DIRECTORY_SEPARATOR.$filename)));
 					}
 				}
 			    return Redirect::to('admin/products')->with('message', 'Votre annonce est désormais en ligne !');
 		    }else{
 		    	return Redirect::to('admin/products')
+=======
+				    }
+				}
+			    return Redirect::to('admin/products')->with('message', 'Votre annonce est désormais en ligne !');
+		    }else{
+		    	return Redirect::to('admin/products')->with('error', 'Vous n\'avez pas accès à cette partie du site')
+>>>>>>> cba00a42a2a4947d725fd367f45b2c8d4f56f744
 		    	->with('error', 'Veuillez corrigez vos erreurs !')
 				->withErrors($validator)
 				->withInput();
@@ -87,7 +99,11 @@ class ProductsController extends \BaseController {
 	 * @return Response
 	 */
 	public function getProductsByCategory($id){
+<<<<<<< HEAD
 		return Response::json(Product::where('category_id','=',$id)->orderBy('sort_order', 'asc')->get());
+=======
+		return Response::json(Product::where('category_id','=',$id)->get());
+>>>>>>> cba00a42a2a4947d725fd367f45b2c8d4f56f744
 	}
 
 	/**
@@ -112,6 +128,12 @@ class ProductsController extends \BaseController {
 	 */
 	public function update($id){
 		$product = Product::findOrFail($id);
+<<<<<<< HEAD
+=======
+        if(!Auth::check())
+        	return Redirect::to('/')->with('message', 'Vous n\'avez pas accès à cette partie du site');
+
+>>>>>>> cba00a42a2a4947d725fd367f45b2c8d4f56f744
         if(!empty(Input::get('name')))
         	$datas['name'] = Input::get('name');
 		if(!empty(Input::get('prix')))
@@ -144,12 +166,16 @@ class ProductsController extends \BaseController {
 				$extension = strtolower($file->getClientOriginalExtension());
 				$mime = $file->getMimeType();
 				$file->move($path, $filename);
+<<<<<<< HEAD
 				Product::resize(public_path(strtolower('uploads'.DIRECTORY_SEPARATOR.$product->id.DIRECTORY_SEPARATOR.$filename)));
+=======
+>>>>>>> cba00a42a2a4947d725fd367f45b2c8d4f56f744
 		    }
 		}
         return Redirect::to('admin/products')->with('message', 'Votre annonce a bien été édité !');
 	}
 
+<<<<<<< HEAD
 	public function sort()
 	{
 		$input = \Input::get('order');
@@ -161,6 +187,8 @@ class ProductsController extends \BaseController {
 			$i++;
 		}
 	}
+=======
+>>>>>>> cba00a42a2a4947d725fd367f45b2c8d4f56f744
 
 	/**
 	 * Remove the specified resource from storage.
