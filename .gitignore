@@ -1,0 +1,10 @@
+/laravelfiles/bootstrap/compiled.php
+/laravelfiles/vendor
+/laravelfiles/composer.phar
+/laravelfiles/composer.lock
+/uploads
+.env.*.php
+.env.php
+.DS_Store
+Thumbs.db
+
