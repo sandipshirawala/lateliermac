@@ -2,11 +2,7 @@
 
 class Product extends Eloquent{
 
-<<<<<<< HEAD
     protected $fillable = array('name', 'description', 'detail', 'prix', 'photo1', 'photo2', 'photo3', 'created_at', 'category_id', 'sort_order');
-=======
-    protected $fillable = array('name', 'description', 'detail', 'prix', 'photo1', 'photo2', 'photo3', 'created_at', 'category_id');
->>>>>>> cba00a42a2a4947d725fd367f45b2c8d4f56f744
 
 	public static $rules = array(
         'name' => 'required',
@@ -14,7 +10,6 @@ class Product extends Eloquent{
         'prix'=>'required'
     );
 
-<<<<<<< HEAD
     public static function boot() {
         parent::boot();
         static::creating(function($product){
@@ -22,8 +17,6 @@ class Product extends Eloquent{
         });
     }
 
-=======
->>>>>>> cba00a42a2a4947d725fd367f45b2c8d4f56f744
 	public static function show($datetime,$heure=false){
         $tmstamp=strtotime($datetime);
         $jour = array('Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi', 'Dimanche');
@@ -35,7 +28,6 @@ class Product extends Eloquent{
         return ($date);
     }
 
-<<<<<<< HEAD
     public static function resize($filename){
         // Le fichier
         $percent = 0.3;
@@ -54,8 +46,6 @@ class Product extends Eloquent{
         imagejpeg($image_p, $filename, 100);
 
     }
-=======
->>>>>>> cba00a42a2a4947d725fd367f45b2c8d4f56f744
 
 	// public function user(){
 	// 	return $this->belongsTo->('Role');

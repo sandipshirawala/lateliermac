@@ -39,7 +39,6 @@ $(function(){
         $(".socials").show("normal");
     });
 
-<<<<<<< HEAD
     //close-circle event click close sections
     $('.closemen').click(function(){
         $(".onglets").hide('normal');
@@ -50,8 +49,6 @@ $(function(){
         $(".socials").show('normal');
     });
 
-=======
->>>>>>> cba00a42a2a4947d725fd367f45b2c8d4f56f744
 });
 
 // $(function(){
@@ -70,16 +67,6 @@ $(function(){
 // id="popoverData"
 // html : <a data-content="Popover with data-trigger" rel="popover" data-placement="bottom" data-original-title="Title" data-trigger="hover" href="#">
 
-<<<<<<< HEAD
-=======
- $(document).ready(function() {
-    $('.mtnance').tooltip();
-    $('.toolcon').tooltip();
-    $('.tooldev').tooltip();
-    $('.devis').tooltip();
- });
-
->>>>>>> cba00a42a2a4947d725fd367f45b2c8d4f56f744
 $(function(){
     $(".contact").click(function() {
         if(window.location.pathname == '/lateliermac/'){

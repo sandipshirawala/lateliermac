@@ -54,17 +54,10 @@ return array(
 
 		'mysql' => array(
 			'driver'    => 'mysql',
-<<<<<<< HEAD
 			'host'      => 'latelierpfmac.mysql.db',
 			'database'  => 'latelierpfmac',
 			'username'  => 'latelierpfmac',
 			'password'  => 'Latelier26',
-=======
-			'host'      => 'localhost',
-			'database'  => 'ateliermac',
-			'username'  => 'root',
-			'password'  => 'root',
->>>>>>> cba00a42a2a4947d725fd367f45b2c8d4f56f744
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => '',

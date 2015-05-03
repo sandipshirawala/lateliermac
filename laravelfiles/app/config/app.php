@@ -26,11 +26,7 @@ return array(
 	|
 	*/
 
-<<<<<<< HEAD
 	'url' => 'http://www.lateliermac.com/',
-=======
-	'url' => 'http://www.lateliermac.com',
->>>>>>> cba00a42a2a4947d725fd367f45b2c8d4f56f744
 
 	/*
 	|--------------------------------------------------------------------------
