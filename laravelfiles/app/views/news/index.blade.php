@@ -1,89 +1,39 @@
-@extends('layouts.admin')
-@section('content')
+@extends('layouts.master')
 
-	<div class="macbk">
-	</div>
-	<div class="panel panel-default productlist">
-        <hr />
-        <div class="drop102">
-            <span class="last10">
-          	  	GESTION DE LA PRESSE &nbsp;
-            	<i class="crudadm fa fa-shopping-cart"></i>
-	            <span data-toggle="modal" class="voir btn btn-default btn-sm btn-lg" data-target="#myModal"><i class="fa fa-plus fa-2x"></i></span>
-            	<br>
-            </span>
-            <hr />
+@section('content')
+<div class="all" style="margin-top:1% !important;">
+    <div class="container prodindex">
+				@foreach($news as $new)
+        <div class="row carousel-row">
+            <div class="col-xs-8 col-xs-offset-2 slide-row">
+                <div class="carousel slide slide-carousel" data-ride="carousel">
+                  <!-- Wrapper for slides -->
+                  <div class="carousel-inner">
+                    <div class="item active">
+                        <a href="{{ URL::to('presse/'.$new->id.'/'.$new->file) }}" class="fancybox" rel="<% product.id %>">
+                            <img src="{{ URL::to('presse/'.$new->id.'/'.$new->file) }}" alt="Image">
+                        </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="slide-content">
+                    <h4>{{ $new->name }}</h4>
+                    <p>{{ substr($new->content, 0, 100) }}</p>
+                </div>
+                <div class="slide-footer">
+                    <span class="pricelab label label-primary label-lg"><% product.prix %> €</span>
+                    <span class="pull-right buttons">
+                        <button ng-click="showNew({{ $new->name }})" class="btn btn-sm btn-primary more"><i class="fa fa-fw fa-eye"></i> Voir +</button>
+                    </span>
+                </div>
+            </div>
         </div>
-        <div class="tab1">
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th>#</th>
-                        <th>Titre</th>
-                        <th>Actions</th>
-                    </tr>
-                </thead>
-                <tbody id="sortable" ui-sortable="sortableOptions" ng-model="products">
-                    <tr id="<% product.id %>" class="tr" ng-repeat="product in products">
-                        <td>id</td>
-                        <td>name</td>
-                        <td class="actions">
-                            <span class="crudadm fa fa-pencil" ng-click="editNew(product.id)"></span> &nbsp;
-                            <span class="crudadm fa fa-remove" ng-click="deleteNew(product.id)"></span>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+				@endforeach
     </div>
-	<div class="modal fade newprod" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-		<div class="modal-dialog">
-			<div class="modal-content">
-				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
-					<h4 class="modal-title" id="myModalLabel">Nouvelle presse</h4>
-				</div>
-				<div class="modal-body">
-					<div>
-						{{ Form::open(array('url' => 'admin/news' , 'enctype'=>'multipart/form-data')) }}
-							<div class="form-group">
-								<label for="namep">Titre</label>
-								<input type="text" id="namep" class="form-control" name="name" placeholder="Optionnel">
-							</div>
-							<div class="form-group">
-								<label for="textadesc">Description</label>
-								<textarea class="form-control" id="textadesc" name="description" cols="30" rows="5" placeholder="Optionnel"></textarea>
-							</div>
-							<div class="form-group">
-								<label for="namep">Fichier <span class="text-muted">(optionnel)</span></label>
-								 {{ Form::file('files[]', array('class'=>'input-block-level', 'multiple')) }}
-							</div>
-							<div class="form-group text-left subads">
-								<button type="submit" class="subbtn btn btn-primary">Ajouter</button>
-							</div>
-						{{ Form::close() }}
-					</div>
-				</div>
-				<div class="modal-footer">
-					<button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
-				</div>
-			</div>
-		</div>
-	</div>
-	<script>
-	$(document).ready(function () {
-		$('#sortable').sortable({
-			cursor: 'move',
-			axis: 'y',
-			update: function (event, ui) {
-				var order = $(this).sortable('toArray');
-				$.ajax({
-					data : {order : order},
-					type: 'POST',
-					url: 'http://www.lateliermac.com/reorder'
-				});
-			}
-		});
-	});
-	</script>
+</div>
+<script>
+    $(function(){
+        $('.fancybox').fancybox();
+    });
+</script>
 @stop

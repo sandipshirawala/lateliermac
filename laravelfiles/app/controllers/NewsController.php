@@ -31,16 +31,23 @@ class NewsController extends \BaseController {
 	 */
 	public function store()
 	{
-		$validator = Validator::make($data = Input::all(), News::$rules);
+		    $add = new News;
+	      $add->name = Input::get('name');
+	      $add->content = Input::get('content');
+	      $files = Input::file('files');
 
-		if ($validator->fails())
-		{
-			return Redirect::back()->withErrors($validator)->withInput();
-		}
+	      if($files)
+				 	$add->file = strtolower($files->getClientOriginalName());
 
-		News::create($data);
+				$add->save();
 
-		return Redirect::route('news.index');
+				if(!empty($add->file)){
+						$path = public_path(strtolower('presse'.DIRECTORY_SEPARATOR.$add->id));
+						$filename = strtolower($files->getClientOriginalName());
+						$files->move($path, $filename);
+				}
+
+				return Redirect::route('news.index')->with('message', 'Votre article de presse est désormais en ligne !');
 	}
 
 	/**
@@ -64,44 +71,56 @@ class NewsController extends \BaseController {
 	 */
 	public function edit($id)
 	{
-		$news = News::find($id);
-
-		return View::make('news.edit', compact('news'));
+		if(!Auth::check())
+				return Redirect::to('/')->with('error', 'Vous n\'avez pas accès à cette partie du site !');
+		$new  = News::findOrFail($id);
+		return View::make('news.edit', compact('new'));
 	}
 
 	/**
-	 * Update the specified news in storage.
+	 * Remove the specified resource from storage.
 	 *
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function update($id)
-	{
-		$news = News::findOrFail($id);
+	public function delete($id){
+		if(Auth::check()){
+			News::destroy($id);
 
-		$validator = Validator::make($data = Input::all(), News::$rules);
+			return Redirect::to('admin/news')->with('message', 'L\'article a bien été supprimé !');
+		}else
 
-		if ($validator->fails())
-		{
-			return Redirect::back()->withErrors($validator)->withInput();
-		}
-
-		$news->update($data);
-
-		return Redirect::route('news.index');
+			return Redirect::to('/')->with('error', 'Vous n\'êtes pas autorisé à accéder à cette partie du site');
 	}
-
 	/**
-	 * Remove the specified news from storage.
+	 * Update the specified resource in storage.
 	 *
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function destroy($id)
-	{
-		News::destroy($id);
+	public function update($id){
+			$news = News::findOrFail($id);
 
-		return Redirect::route('news.index');
+    	if(!empty(Input::get('name')))
+        	$datas['name'] = Input::get('name');
+			if(!empty(Input::get('content')))
+        	$datas['content'] = Input::get('content');
+  		if(!empty(Input::file('files'))){
+					$file = Input::file('files');
+	    		$datas['file'] = strtolower($file->getClientOriginalName());
+			}
+
+			$news->update($datas);
+
+			if(!empty($file)){
+				$path = public_path(strtolower('presse'.DIRECTORY_SEPARATOR.$news->id));
+				$filename = strtolower($file->getClientOriginalName());
+				$extension = strtolower($file->getClientOriginalExtension());
+				$mime = $file->getMimeType();
+				$file->move($path, $filename);
+		  }
+
+			return Redirect::to('admin/news')->with('message', 'Article édité avec succès !');
 	}
 
 }

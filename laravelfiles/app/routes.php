@@ -30,7 +30,9 @@ Route::post('reorder', ['uses' => 'ProductsController@sort', 'as' => 'sort']);
 Route::group(['before' => 'auth', 'prefix' => 'admin'], function(){
 	$id = '[0-9]+';
 	Route::get('delete/{id}', ['uses' => 'ProductsController@postDelete'])->where('id', $id);
+	Route::get('news/delete/{id}', ['uses' => 'NewsController@delete'])->where('id', $id);
 	Route::get('products', ['uses' => 'AdminController@getProducts', 'as' => 'products']);
+	Route::get('news', ['uses' => 'AdminController@getNews', 'as' => 'news']);
 	Route::post('products', ['uses' => 'ProductsController@store', 'as' => 'store']);
 	Route::post('news', ['uses' => 'NewsController@store']);
 	Route::get('/', ['uses' => 'AdminController@index', 'as' => 'panel']);

@@ -11,16 +11,12 @@
         <input type="text" id="namep" class="form-control" name="name" placeholder="{{ $new->name }}">
     </div>
     <div class="form-group">
-        <label for="price">Prix</label>
-        <input type="text" id="price" class="form-control" name="prix" placeholder="{{ $new->prix }}">
-    </div>
-    <div class="form-group">
         <label for="textadesc">Description</label>
-        <textarea class="form-control" id="textadesc" name="description" cols="30" rows="5" placeholder="{{ $new->description }}"></textarea>
+        <textarea class="form-control" id="textadesc" name="content" cols="30" rows="5" placeholder="{{ $new->content }}"></textarea>
     </div>
     <div class="form-group">
-        <label for="namep">Photos</label>
-         {{ Form::file('files[]', array('class'=>'input-block-level')) }}
+        <label for="namep">Fichier</label>
+         {{ Form::file('files', array('class'=>'input-block-level')) }}
     </div>
     <div class="row">
 

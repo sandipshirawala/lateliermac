@@ -23,15 +23,17 @@
                         <th>Actions</th>
                     </tr>
                 </thead>
-                <tbody id="sortable" ui-sortable="sortableOptions" ng-model="products">
-                    <tr id="<% product.id %>" class="tr" ng-repeat="product in products">
-                        <td>id</td>
-                        <td>name</td>
+                <tbody>
+									@foreach($news as $new)
+                    <tr class="tr">
+                        <td>{{ $new->id }}</td>
+                        <td>{{ $new->name }}</td>
                         <td class="actions">
-                            <span class="crudadm fa fa-pencil" ng-click="editNew(product.id)"></span> &nbsp;
-                            <span class="crudadm fa fa-remove" ng-click="deleteNew(product.id)"></span>
+                            <span class="crudadm fa fa-pencil" ng-click="editNew({{ $new->id }})"></span> &nbsp;
+                            <span class="crudadm fa fa-remove" ng-click="deleteNew({{ $new->id }})"></span>
                         </td>
                     </tr>
+									@endforeach
                 </tbody>
             </table>
         </div>
@@ -41,22 +43,22 @@
 			<div class="modal-content">
 				<div class="modal-header">
 					<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
-					<h4 class="modal-title" id="myModalLabel">Nouvelle presse</h4>
+					<h4 class="modal-title" id="myModalLabel">Nouvel article</h4>
 				</div>
 				<div class="modal-body">
 					<div>
 						{{ Form::open(array('url' => 'admin/news' , 'enctype'=>'multipart/form-data')) }}
 							<div class="form-group">
 								<label for="namep">Titre</label>
-								<input type="text" id="namep" class="form-control" name="name" placeholder="iMac, Macbook..">
+								<input type="text" id="namep" class="form-control" name="name" placeholder="Optionnel">
 							</div>
 							<div class="form-group">
-								<label for="textadesc">Description <span class="text-muted">(optionnel)</span></label>
-								<textarea class="form-control" id="textadesc" name="description" cols="30" rows="5" placeholder="etat, configuration.."></textarea>
+								<label for="textadesc">Description</label>
+								<textarea class="form-control" id="textadesc" name="content" cols="30" rows="5" placeholder="Optionnel"></textarea>
 							</div>
 							<div class="form-group">
-								<label for="namep">Fichier<span class="text-muted">(optionnel)</span></label>
-								 {{ Form::file('files[]', array('class'=>'input-block-level', 'multiple')) }}
+								<label for="namep">Fichier <span class="text-muted">(optionnel)</span></label>
+								 {{ Form::file('files', array('class'=>'input-block-level', 'multiple')) }}
 							</div>
 							<div class="form-group text-left subads">
 								<button type="submit" class="subbtn btn btn-primary">Ajouter</button>
@@ -70,20 +72,4 @@
 			</div>
 		</div>
 	</div>
-	<script>
-	$(document).ready(function () {
-		$('#sortable').sortable({
-			cursor: 'move',
-			axis: 'y',
-			update: function (event, ui) {
-				var order = $(this).sortable('toArray');
-				$.ajax({
-					data : {order : order},
-					type: 'POST',
-					url: 'http://www.lateliermac.com/reorder'
-				});
-			}
-		});
-	});
-	</script>
 @stop

@@ -17,6 +17,11 @@ class AdminController extends \BaseController {
 		return View::make('admin.products')->with('product', $product);
 	}
 
+	public function getNews(){
+		$news = News::paginate(5);
+		return View::make('admin.news')->with('news', $news);
+	}
+
 
 	/**
 	 * Display the specified resource.
