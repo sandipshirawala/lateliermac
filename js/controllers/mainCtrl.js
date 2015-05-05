@@ -13,7 +13,6 @@ angular.module('mainCtrl', [])
 	var value = uri[6];
 	//RegExp. all numbers digits (0 a 9 et +)
 	var threadid = /\d/g;
-	console.log(window.location.pathname);
 	// Récupère les différentes catégories et les affiche
 	if(window.location.pathname == '/products'){
 		Product.getproducts(1)

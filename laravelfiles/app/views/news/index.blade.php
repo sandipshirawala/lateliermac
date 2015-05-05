@@ -21,7 +21,6 @@
                     <p>{{ substr($new->content, 0, 100) }}</p>
                 </div>
                 <div class="slide-footer">
-                    <span class="pricelab label label-primary label-lg"><% product.prix %> €</span>
                     <span class="pull-right buttons">
                         <button ng-click="showNew({{ $new->name }})" class="btn btn-sm btn-primary more"><i class="fa fa-fw fa-eye"></i> Voir +</button>
                     </span>
