@@ -15,15 +15,6 @@ class ProductsController extends \BaseController {
 
 
 	/**
-	 * Show the form for creating a new resource.
-	 *
-	 * @return Response
-	 */
-	public function create(){
-	}
-
-
-	/**
 	 * Store a newly created resource in storage.
 	 *
 	 * @return Response
@@ -147,7 +138,7 @@ class ProductsController extends \BaseController {
 				Product::resize(public_path(strtolower('uploads'.DIRECTORY_SEPARATOR.$product->id.DIRECTORY_SEPARATOR.$filename)));
 		    }
 		}
-        return Redirect::to('admin/products')->with('message', 'Votre annonce a bien été édité !');
+        return Redirect::to('admin/products')->with('message', 'Annonce éditée avec succès !');
 	}
 
 	public function sort()

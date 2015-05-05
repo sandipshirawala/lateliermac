@@ -22,7 +22,7 @@
             <table class="table">
                 <thead>
                     <tr>
-                        <th>ID</th>
+                        <th>#</th>
                         <th>Prix</th>
                         <th>Nom</th>
                         <th>Actions</th>

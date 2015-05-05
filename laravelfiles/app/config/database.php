@@ -54,6 +54,18 @@ return array(
 
 		'mysql' => array(
 			'driver'    => 'mysql',
+			'host'      => 'localhost',
+			'database'  => 'latelierpfmac',
+			'username'  => 'root',
+			'password'  => 'root',
+			'charset'   => 'utf8',
+			'collation' => 'utf8_unicode_ci',
+			'prefix'    => '',
+		),
+
+/* PROD CONFIG
+		'mysql' => array(
+			'driver'    => 'mysql',
 			'host'      => 'latelierpfmac.mysql.db',
 			'database'  => 'latelierpfmac',
 			'username'  => 'latelierpfmac',
@@ -62,6 +74,7 @@ return array(
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => '',
 		),
+	*/
 
 		'pgsql' => array(
 			'driver'   => 'pgsql',

@@ -32,6 +32,7 @@ Route::group(['before' => 'auth', 'prefix' => 'admin'], function(){
 	Route::get('delete/{id}', ['uses' => 'ProductsController@postDelete'])->where('id', $id);
 	Route::get('products', ['uses' => 'AdminController@getProducts', 'as' => 'products']);
 	Route::post('products', ['uses' => 'ProductsController@store', 'as' => 'store']);
+	Route::post('news', ['uses' => 'NewsController@store']);
 	Route::get('/', ['uses' => 'AdminController@index', 'as' => 'panel']);
 	Route::get('getproducts/{id}', ['uses' => 'ProductsController@getProductsByCategory'])->where('id', $id);
 });
@@ -40,3 +41,4 @@ Route::get('getproducts/{id}', ['uses' => 'ProductsController@getProductsByCateg
 
 //Ressources
 Route::resource('products', 'ProductsController', ['except' => [ 'destroy']]);
+Route::resource('news', 'NewsController', ['except' => ['create', 'destroy', 'store']]);
