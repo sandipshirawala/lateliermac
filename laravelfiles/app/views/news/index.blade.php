@@ -47,12 +47,12 @@
 					<div>
 						{{ Form::open(array('url' => 'admin/news' , 'enctype'=>'multipart/form-data')) }}
 							<div class="form-group">
-								<label for="namep">Titre <span class="text-muted">(optionnel)</span></label>
-								<input type="text" id="namep" class="form-control" name="name" placeholder="iMac, Macbook..">
+								<label for="namep">Titre</label>
+								<input type="text" id="namep" class="form-control" name="name" placeholder="Optionnel">
 							</div>
 							<div class="form-group">
-								<label for="textadesc">Description <span class="text-muted">(optionnel)</span></label>
-								<textarea class="form-control" id="textadesc" name="description" cols="30" rows="5" placeholder="etat, configuration.."></textarea>
+								<label for="textadesc">Description</label>
+								<textarea class="form-control" id="textadesc" name="description" cols="30" rows="5" placeholder="Optionnel"></textarea>
 							</div>
 							<div class="form-group">
 								<label for="namep">Fichier <span class="text-muted">(optionnel)</span></label>

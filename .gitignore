@@ -2,6 +2,7 @@
 /laravelfiles/vendor
 /laravelfiles/composer.phar
 /laravelfiles/composer.lock
+/laravelfiles/app/config/database.php.prod
 /uploads
 .env.*.php
 .env.php

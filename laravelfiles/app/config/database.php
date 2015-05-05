@@ -63,18 +63,6 @@ return array(
 			'prefix'    => '',
 		),
 
-/* PROD CONFIG
-		'mysql' => array(
-			'driver'    => 'mysql',
-			'host'      => 'latelierpfmac.mysql.db',
-			'database'  => 'latelierpfmac',
-			'username'  => 'latelierpfmac',
-			'password'  => 'Latelier26',
-			'charset'   => 'utf8',
-			'collation' => 'utf8_unicode_ci',
-			'prefix'    => '',
-		),
-	*/
 
 		'pgsql' => array(
 			'driver'   => 'pgsql',
