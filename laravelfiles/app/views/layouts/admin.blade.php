@@ -45,6 +45,11 @@
                             </a>
                         </b></li>
                         <li><b>
+                            <a href="{{ URL::to('admin/news') }}" data-scroll>
+                              <i class="fa fa-newspaper-o"></i><span class="navbtn">&nbsp;&nbsp;&nbsp;PRESSE</span>
+                            </a>
+                        </b></li>
+                        <li><b>
                             <a href="#anch2" data-scroll>
                                 <i class="fa fa-user solo "></i><span class="navbtn">&nbsp;&nbsp;&nbsp;FOLLOWERS</span>
                             </a>

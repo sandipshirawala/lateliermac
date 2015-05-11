@@ -7,7 +7,7 @@
         <meta name="keywords" content="mac,apple,atelier,montelimar,reparation,ordinateur,achat,vente,26,drome,iphone,ipad,imac,macbook,repare,piece,detachees,macbookpro,air,iMac,iPad,occasion,26,drôme,montélimar,place,des,clercs,place des clercs,boutique apple,magasin apple,réparation apple,vente apple,achat apple,assistance apple,assistance mac,mac ">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="http://www.lateliermac.com/fancybox/source/jquery.fancybox.css" type="text/css" media="screen" />
-        <link rel="icon" href="img/atelierpng.ico" />
+        <link rel="icon" href="http://lateliermac.com/img/atelierpng.ico" />
         {{HTML::style('css/bootstrap.css') }}
         {{HTML::style('css/main.css') }}
         <!-- LIBS -->
@@ -40,9 +40,10 @@
                     </span>
                     <nav class="menu">
                         <ul>
-                            <li data-target-id=""><a href="{{ URL::to('/') }}">Accueil &nbsp; <i class="fa fa-home fa-2x"></i></a></li>
-                            <li data-target-id=""><a class="contact">Contact &nbsp; <i class="fa fa-envelope fa-2x"></i></a></li>
+                            <li data-target-id=""><a id="accueil-li" href="{{ URL::to('/') }}">Accueil &nbsp; <i class="fa fa-home fa-2x"></i></a></li>
                             <li data-target-id=""><a href="{{ URL::to('products') }}">ACHAT / VENTE &nbsp;<i class="fa fa-shopping-cart fa-2x"></i></a></li>
+                            <li data-target-id=""><a href="{{ URL::to('news') }}">PRESSE &nbsp;&nbsp;<i class="fa fa-newspaper-o fa-2x"></i></a></li>
+                            <li data-target-id=""><a class="contact">Contact &nbsp; <i class="fa fa-envelope fa-2x"></i></a></li>
                         </ul>
                     </nav>
             </header>

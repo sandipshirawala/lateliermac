@@ -1434,7 +1434,7 @@
             margin-bottom: 1%;
         }
         nav.menu {
-            margin-left: 10%;
+            margin-left: 15%;
         }
         .linkpag{
             margin-left: 47% !important;
@@ -1467,6 +1467,11 @@
             margin-top: -34%;
             width: 366px;
             height: 300px;
+        }
+
+        .newphoto{
+            margin-left: 5%;
+            width: 90%;
         }
 
         .tags{
@@ -1546,3 +1551,5 @@
         .servlink:hover{cursor:pointer;color: #000}
         .menlink{color:#FFF}
         .menlink:hover{cursor:pointer;color: #000}
+        #accueil-li{  margin-left: -19%;}
+        .newscontent{color: #000000;}

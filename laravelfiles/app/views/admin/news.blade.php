@@ -37,6 +37,9 @@
                 </tbody>
             </table>
         </div>
+				<div class="text-center">					
+				{{ $news->links() }}
+				</div>
     </div>
 	<div class="modal fade newprod" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 		<div class="modal-dialog">

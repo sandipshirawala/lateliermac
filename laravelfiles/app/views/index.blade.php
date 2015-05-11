@@ -123,7 +123,7 @@
                     <div id="collapseachat" class="panel-collapse collapse in">
                       <div class="panel-body">
                             Nous rachetons vos produits d'occasion, en état de fonctionnement ou non, après une rapide étude, si ils correspondent à notre besoin.
-                            <br>Pour éviter de vous déplacer, remplissez le formulaire de rachat afin de nous proposer votre produit <br><b><a class="rachatform" data-toggle="modal" data-target="#myModal"> Cliquez ici pour nous proposer votre produit</a></b><br>
+                            <br>Pour éviter de vous déplacer, remplissez le formulaire de rachat afin de nous proposer votre produit <br><b><a class="rachatform contact"> Cliquez ici pour nous proposer votre produit</a></b><br>
                             Nous vous donnerons une réponse dans les jours qui suivent, avec une fourchette de prix, dans la mesure du possible. <br>
                             Sinon, venez directement nous rendre visite au <b>26 Place des Clercs</b> à <b>Montélimar</b>
                             <br>
@@ -165,7 +165,7 @@
                             </div>
                             <div class="form-group">
                               <label for="textadesc">Description</label>
-                              <textarea class="form-control" required id="textadesc" name="description" cols="30" rows="5" placeholder="etat, configuration.."></textarea>
+                              <textarea class="form-control" required id="textadesc" name="contenu" cols="30" rows="5" placeholder="etat, configuration.."></textarea>
                             </div>
                             <div class="form-group">
                               <label for="namep">Photos</label>

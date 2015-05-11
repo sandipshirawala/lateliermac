@@ -79,6 +79,10 @@ angular.module('mainCtrl', [])
 		document.location.href="http://www.lateliermac.com/admin/news/delete/"+id;
 	};
 
+	$scope.showNew = function(id){
+		document.location.href="http://www.lateliermac.com/news/"+id;
+	};
+
 	$scope.showByProductId = function(id){
 		document.location.href="http://www.lateliermac.com/products/"+id;
 	};

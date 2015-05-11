@@ -9,25 +9,30 @@
                 <div class="carousel slide slide-carousel" data-ride="carousel">
                   <!-- Wrapper for slides -->
                   <div class="carousel-inner">
+                    @if(!is_null($new->file))
                     <div class="item active">
                         <a href="{{ URL::to('presse/'.$new->id.'/'.$new->file) }}" class="fancybox" rel="<% product.id %>">
                             <img src="{{ URL::to('presse/'.$new->id.'/'.$new->file) }}" alt="Image">
                         </a>
                     </div>
+                    @endif
                   </div>
                 </div>
                 <div class="slide-content">
-                    <h4>{{ $new->name }}</h4>
-                    <p>{{ substr($new->content, 0, 100) }}</p>
+                    <h4 @if(is_null($new->file)) style="margin-left: -30% !important;" @endif class="text-center">{{ $new->name }}</h4>
+                    <p @if(is_null($new->file)) style="margin-left: -30% !important;" @endif>{{ substr($new->content, 0, 200) }} <br>[...]</p>
                 </div>
                 <div class="slide-footer">
                     <span class="pull-right buttons">
-                        <button ng-click="showNew({{ $new->name }})" class="btn btn-sm btn-primary more"><i class="fa fa-fw fa-eye"></i> Voir +</button>
+                        <button ng-click="showNew({{ $new->id }})" class="btn btn-sm btn-primary more"><i class="fa fa-fw fa-eye"></i> Voir +</button>
                     </span>
                 </div>
             </div>
         </div>
 				@endforeach
+        <div class="text-center">
+          {{ $news->links() }}
+        </div>
     </div>
 </div>
 <script>
