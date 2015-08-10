@@ -27,17 +27,17 @@
                   <div class="carousel-inner">
                     <div class="item active">
                         <a href="{{ URL::to('uploads/<%product.id%>/<%product.photo1%>') }}" class="fancybox" rel="<% product.id %>">
-                            <img src="{{ URL::to('uploads/<%product.id%>/<%product.photo1%>') }}" alt="Image">
+                            <img ng-src="{{ URL::to('uploads/<%product.id%>/<%product.photo1%>') }}" alt="Image">
                         </a>
                     </div>
                     <div class="item">
                         <a href="{{ URL::to('uploads/<%product.id%>/<%product.photo2%>') }}" class="fancybox"  rel="<% product.id %>">
-                            <img src="{{ URL::to('uploads/<%product.id%>/<%product.photo2%>') }}" alt="Image">
+                            <img ng-src="{{ URL::to('uploads/<%product.id%>/<%product.photo2%>') }}" alt="Image">
                         </a>
                     </div>
                     <div class="item">
                         <a href="{{ URL::to('uploads/<%product.id%>/<%product.photo3%>') }}" class="fancybox"  rel="<% product.id %>">
-                            <img src="{{ URL::to('uploads/<%product.id%>/<%product.photo3%>') }}" alt="Image">
+                            <img ng-src="{{ URL::to('uploads/<%product.id%>/<%product.photo3%>') }}" alt="Image">
                         </a>
                     </div>
                   </div>
