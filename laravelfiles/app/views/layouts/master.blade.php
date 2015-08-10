@@ -115,7 +115,7 @@
             <footer>
                 <p class="footcont">
                     <small>SAS/U Djecha / RCS Romans - 803980515 - l'aTelier mAc &copy; - 26 Place des Clercs 26200 MONTÉLIMAR </small><br>
-                    <small id="copydev"><a target="_blank" href="http://www.chalasdev.altervista.org" class="chalasdev">Création par Robin CHALAS - Développeur Web &copy;</a></small>
+                    <small id="copydev"><a target="_blank" href="http://www.chalasdev.fr" class="chalasdev">Création par Robin CHALAS - Développeur Web &copy;</a></small>
                 </p>
             </footer>
         </div>

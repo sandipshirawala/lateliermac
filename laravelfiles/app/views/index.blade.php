@@ -316,10 +316,11 @@
         </div>
     </div>
     <div class="resociaux">
-        <span class='social st_sharethis_large' displayText='ShareThis'></span><br>
         <a href="https://www.facebook.com/djeateliermac" target="_blank"><i class="social fa fa-facebook-square fa-3x social-fb"></i></a> <br>
+        <a href="https://fr.linkedin.com/pub/j%C3%A9rome-chalas/24/6a6/184" target="_blank"><i class="social fa fa-linkedin-square fa-3x social-lk"></i></a> <br>
         <a href="https://plus.google.com/u/0/102328922603950184450" target="_blank"><i class="social fa fa-google-plus-square fa-3x social-gp"></i></a> <br>
-        <a href="mailto:contact@lateliermac.com"><i class="social fa fa-envelope-square fa-3x social-em"></i></a>
+        <a href="mailto:contact@lateliermac.com"><i class="social fa fa-envelope-square fa-3x social-em"></i></a><br>
+        <span class='st_sharethis_large' displayText='ShareThis'></span><br>
     </div>
 </div>
 
