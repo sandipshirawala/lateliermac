@@ -25,6 +25,7 @@ Route::post('postlogin', ['uses' => 'UsersController@postLogin', 'as' => 'postlo
 Route::post('contact', ['uses' => 'AdminController@contact', 'as' => 'contact']);
 Route::post('contactprod', ['uses' => 'AdminController@contactProduct', 'as' => 'contactprod']);
 Route::post('reorder', ['uses' => 'ProductsController@sort', 'as' => 'sort']);
+Route::post('subscribe/{id}', ['uses' => 'ProductsController@subscribeProduct']);
 
 //Admin
 Route::group(['before' => 'auth', 'prefix' => 'admin'], function(){

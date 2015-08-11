@@ -1,5 +1,7 @@
 $(document).ready(function(){
-    setTimeout("$('.alert').slideToggle(500);",4000 );
+    if($('.alert').css('display') != "none"){
+      setTimeout("$('.alert').slideToggle(500);",4000 );
+    }
 });
 
 $(function(){

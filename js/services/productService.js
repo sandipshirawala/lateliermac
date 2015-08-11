@@ -26,16 +26,6 @@ angular.module('productService', [])
 					data: $.param(commentData)
 				});
 			},
-			saveAnswer : function(commentData) {
-				var lol = window.location.href.split("/");
-				value = $.param(commentData)+"&threadid="+lol[6];
-				return $http({
-					method: 'POST',
-					url: 'api/answers',
-					headers: { 'Content-Type' : 'application/x-www-form-urlencoded' },
-					data: value
-				});
-			},
 			saveCategory : function(commentData) {
 				return $http({
 					method: 'POST',
@@ -52,12 +42,12 @@ angular.module('productService', [])
 					data: $.param(subData)
 				});
 			},
-			follow : function(followData) {
-				var lol = window.location.href.split("/");
-				value = $.param(followData)+"&threadid="+lol[6];
+			subscribe : function(productId, userEmail) {
+				var data = {email: userEmail};
+				value = $.param(data);
 				return $http({
 					method: 'POST',
-					url: 'api/follows',
+					url: 'http://localhost/PERSO/prod/lateliermac//subscribe/'+ productId,
 					headers: { 'Content-Type' : 'application/x-www-form-urlencoded' },
 					data: value
 				});

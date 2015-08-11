@@ -41,7 +41,7 @@ class AdminController extends \BaseController {
 				Mail::send('emails.contact', $contact->toArray(), function($message) use($contact) {
 		            $message->from('contact@lateliermac.com', 'Client');
 		            $message->to('contact@lateliermac.com', 'Contact client')
-		                	->subject('Service ');
+								->subject('L\'Atelier Mac - Service '.$contact->service);
 		        });
 			    return Redirect::to('/')->with('message', 'Votre message a bien été envoyé');
 
@@ -67,9 +67,9 @@ class AdminController extends \BaseController {
 				$contact->contenu   = Input::get('message');
 				$contact->save();
 				Mail::send('emails.contact', $contact->toArray(), function($message) use($contact) {
-		            $message->from('robin.chalas@gmail.com', 'Client');
-		            $message->to('robin.chalas@gmail.com', 'Contact client')
-		                	->subject('Service ');
+		            $message->from('contact@lateliermac.com', 'Client');
+		            $message->to('contact@lateliermac.com', 'Contact client')
+		                	->subject('Service '.$contact->service);
 		    });
 
 				return Redirect::to('/')->with('message', 'Votre message a bien été envoyé');

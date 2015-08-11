@@ -24,20 +24,34 @@ class ProductsController extends \BaseController {
 			$validator = Validator::make(Input::all(), Product::$rules);
 			if($validator->passes()){
 			    $add = new Product;
-	            $add->name = Input::get('name');
-	            $add->description = Input::get('description');
-	            $add->prix = Input::get('prix');
-	            $add->category_id = Input::get('category');
-	            $files = Input::file('files');
+          $add->name = Input::get('name');
+          $add->description = Input::get('description');
+          $add->prix = Input::get('prix');
+          $add->category_id = Input::get('category');
+          $files = Input::file('files');
 
-	            if(isset($files[0]) && !empty($files[0]))
-	            	$add->photo1 = strtolower($files[0]->getClientOriginalName());
-	            if(isset($files[1]) && !empty($files[1]))
-	            	$add->photo2 = strtolower($files[1]->getClientOriginalName());
-	            if(isset($files[2]) && !empty($files[2]))
-	            	$add->photo3 = strtolower($files[2]->getClientOriginalName());
+          if(isset($files[0]) && !empty($files[0]))
+          	$add->photo1 = strtolower($files[0]->getClientOriginalName());
+          if(isset($files[1]) && !empty($files[1]))
+          	$add->photo2 = strtolower($files[1]->getClientOriginalName());
+          if(isset($files[2]) && !empty($files[2]))
+          	$add->photo3 = strtolower($files[2]->getClientOriginalName());
 
 				$add->save();
+
+				$toNotify = Subscribe::whereHas('category', function($q) use($add)
+				{
+				    $q->where('id', '=', $add->category_id);
+
+				})->get();
+				$category = Category::find($add->category_id);
+				foreach ($toNotify as $user) {
+						$data = ['email' => $user->email, 'category' => $category->name, 'product' => $add->id];
+						Mail::send('emails.notify', $data, function($message) use($data) {
+								$message->from('contact@lateliermac.com', 'Client');
+								$message->to($data['email'], 'Contact client')->subject('Notification produit');
+						});
+				}
 
 				if(!empty($add->photo1)){
 					foreach ($files as $file) {
@@ -143,14 +157,26 @@ class ProductsController extends \BaseController {
 
 	public function sort()
 	{
-		$input = \Input::get('order');
-		$i = 1;
-		foreach($input as $value) {
-			$product = Product::findOrFail($value);
-			$data['sort_order'] = $i;
-			$product->update($data);
-			$i++;
-		}
+			$input = \Input::get('order');
+			$i = 1;
+			foreach($input as $value) {
+					$product = Product::findOrFail($value);
+					$data['sort_order'] = $i;
+					$product->update($data);
+					$i++;
+			}
+	}
+
+	public function subscribeProduct($id)
+	{
+			$product = Product::find($id);
+			$category = Category::find($product->category_id);
+
+			$subscribe = new Subscribe();
+			$subscribe->email = Input::get('email');
+			$category->subscribes()->save($subscribe);
+
+			return Response::json($subscribe);
 	}
 
 	/**

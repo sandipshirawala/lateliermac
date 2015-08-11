@@ -48,6 +48,7 @@
                     </nav>
             </header>
         </div>
+        <div style="display:none;" class="text-center alert alert-success"></div>
         @yield('content')
         <div class="modal fade" id="myModalCont" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
             <div class="modal-dialog">
