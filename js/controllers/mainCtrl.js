@@ -101,20 +101,34 @@ angular.module('mainCtrl', [])
 	};
 
 	$scope.notifyMe = function(){
-		console.log($scope.productId, $scope.email);
 		Product.subscribe($scope.productId, $scope.email)
 			.success(function(data) {
-				$scope.notif = "Vous serez averti par email dés qu'un produit semblable sera disponbible."
-				$scope.productId = '';
-				$('#notifModal').modal('hide');
-				$('.alert-success').text("Vous serez prévenu lorsqu'un produit semblable sera disponible !");
-				$('.alert-success').slideToggle();
-				setTimeout("$('.alert-success').slideToggle(500);",4000 );
+				if(!data.email){
+					console.log(data);
+					$scope.notif =
+					$scope.productId = '';
+					$('#notifModal').modal('hide');
+					$('.jsError').text('Vous êtes déjà abonné à cette catégorie de prduits');
+					$('.jsError').slideToggle();
+					setTimeout("$('.jsError').slideToggle(500);",4000 );
+				}else{
+					$scope.productId = '';
+					$('#notifModal').modal('hide');
+					$('.jsSuccess').text("Vous serez prévenu lorsqu'un produit semblable sera disponible !");
+					$('.jsSuccess').slideToggle();
+					setTimeout("$('.jsSuccess').slideToggle(500);",4000 );
+				}
 			})
 			.error(function(data) {
 				console.log(data);
 			});
 	};
+
+	$('#notifModal input').keydown(function(event){
+			if(event.keyCode == 13){
+					$scope.notifyMe();
+			}
+	});
 
 	/**
 	* Création d'une categorie

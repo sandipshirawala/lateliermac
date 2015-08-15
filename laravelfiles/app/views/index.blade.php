@@ -227,6 +227,7 @@
                     <p class="ecom"><b><em>DISPONIBLE TRÈS PROCHAINEMENT</em></b></p>
             </section>
         </div>
+
         <div id="aside2">
             <div id="presp">
                 <section id="pres_boutique">
@@ -313,6 +314,9 @@
                   </div>
                 </div>
             </div>
+        </div>
+        <div class="newsBlock">
+
         </div>
     </div>
     <div class="resociaux">

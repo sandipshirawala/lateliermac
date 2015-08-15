@@ -12,6 +12,7 @@
         {{HTML::style('css/main.css') }}
         <!-- LIBS -->
         {{HTML::script('js/jquery.js')}}
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.0/jquery.scrollTo.min.js"></script>
         {{HTML::script('js/bootstrap.js') }}
         <script src="http://www.lateliermac.com/fancybox/source/jquery.fancybox.js"></script>
         <script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
@@ -48,7 +49,8 @@
                     </nav>
             </header>
         </div>
-        <div style="display:none;" class="text-center alert alert-success"></div>
+        <div style="display:none;" class="text-center alert alert-success jsSuccess"></div>
+        <div style="display:none;" class="text-center alert alert-danger jsError"></div>
         @yield('content')
         <div class="modal fade" id="myModalCont" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
             <div class="modal-dialog">

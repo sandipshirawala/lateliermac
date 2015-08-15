@@ -185,6 +185,7 @@
 
   #boutiqueimg {
       margin-left: 20px;
+      margin-top: -10px;
       width: 150px;
       height: 150px;
       border-radius: 50%;
@@ -577,6 +578,7 @@
 
       #headasid{
           margin-left: 20%;
+          margin-top: -10px;
       }
 
       #contactform{
@@ -685,13 +687,15 @@
       #aside2 {
           float: right;
           width: 38%;
-          height:680px;
+          height: 520px;;
           margin-top: 5%;
           margin-left: 23%;
           margin-right: 10%;
           float:none;
       }
-
+      .newsBlock{
+        margin-top: -129px;
+      }
       #headasid{
           margin-left: 20%;
       }
@@ -758,17 +762,22 @@
 
       #aside2 {
           width: 27%;
-          height:670px;
+          height: 525px;
           margin-right: 10%;
           margin-top: 0px;
           margin-left: 0px;
           float:right;
       }
+      .newsBlock{
+          margin-top: 545px;
+      }
       .wrapper {
           width: 1026px; /* 1140px - 10% for margins */
           margin: 0 auto;
       }
-
+      #pres_boutique{
+        width: 112% !important;
+      }
       #contactform{
           display: none;
           width: 180%;
@@ -820,6 +829,7 @@
           background-size: 100% 100%;
           color: #ffffff;
           position: relative;
+          margin-top: 2.5%;
       }
 
       #aside1 {
@@ -832,8 +842,11 @@
       #aside2 {
           float: right;
           width: 27%;
-          height:500px;
+          height:480px;
           margin-right: 10%;
+      }
+      .newsBlock{
+          margin-top: 505px;
       }
       .wrapper {
           width: 1026px; /* 1140px - 10% for margins */
@@ -1558,3 +1571,11 @@
   .menlink:hover{cursor:pointer;color: #000}
   #accueil-li{  margin-left: -19%;}
   .newscontent{color: #000000;}
+  .newsBlock{
+    background: url("../img/bg.png");
+    height: 130px;
+    border-radius: 5px;
+    width: 27%;
+    margin-left: 63%;
+    margin-right: 10%;
+  }

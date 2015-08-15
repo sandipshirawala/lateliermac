@@ -171,12 +171,21 @@ class ProductsController extends \BaseController {
 	{
 			$product = Product::find($id);
 			$category = Category::find($product->category_id);
+			$subscribe = false;
+			$email = Input::get('email');
+			$existingSubscribe = Subscribe::where('email', '=', $email)->whereHas('category', function($q) use($product)
+			{
+					$q->where('id', '=', $product->category_id);
 
-			$subscribe = new Subscribe();
-			$subscribe->email = Input::get('email');
-			$category->subscribes()->save($subscribe);
+			})->get();
+			$countExisting = count($existingSubscribe);
+			if($countExisting < 1){
+					$subscribe = new Subscribe();
+					$subscribe->email = $email;
+					$category->subscribes()->save($subscribe);
+			}
 
-			return Response::json($subscribe);
+			return Response::json($subscribe ? $subscribe : 'Already Exist');
 	}
 
 	/**
