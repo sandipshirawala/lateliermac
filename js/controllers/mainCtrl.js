@@ -31,6 +31,7 @@ angular.module('mainCtrl', [])
 		});
 	};
 
+
 	/**
 	* Affiche les threads par sous_catégorie
 	* @return data
@@ -62,6 +63,7 @@ angular.module('mainCtrl', [])
 			});
 		}
 	};
+
 
 /*
 * ADMIN
@@ -97,6 +99,7 @@ angular.module('mainCtrl', [])
 	$scope.notifForm = function(productId){
 			$scope.productId = productId;
 	};
+
 	$scope.notifyMe = function(){
 		Product.subscribe($scope.productId, $scope.email)
 			.success(function(data) {
