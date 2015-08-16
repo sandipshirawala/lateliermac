@@ -3,6 +3,9 @@
 @section('content')
 <div class="all" style="margin-top:1% !important;">
     <div class="categoriesmenu">
+        <div class="form-group searchInput">
+            <input type="text" name="name" class="form-control" placeholder="Recherche ..." autocomplete="off" ng-model="query.name">
+        </div>
         <div class="list-group">
             <span class="list-group-item" ng-click="getProductsByCat(1)">
                 <i class="flaticon-imac"></i> Macs
@@ -20,7 +23,7 @@
     </div>
     <div class="container prodindex">
         <!-- Begin of rows -->
-        <div class="row carousel-row" ng-repeat="product in products">
+        <div class="row carousel-row" ng-repeat="product in products | filter: query">
             <div class="col-xs-8 col-xs-offset-2 slide-row">
                 <div class="carousel slide slide-carousel" data-ride="carousel">
                   <!-- Wrapper for slides -->
