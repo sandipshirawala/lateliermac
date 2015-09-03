@@ -108,15 +108,17 @@ angular.module('mainCtrl', [])
 					$scope.notif =
 					$scope.productId = '';
 					$('#notifModal').modal('hide');
-					$('.jsError').text('Vous êtes déjà abonné à cette catégorie de prduits');
-					$('.jsError').slideToggle();
-					setTimeout("$('.jsError').slideToggle(500);",4000 );
+					// $('.jsError').text('Vous êtes déjà abonné à cette catégorie de prduits');
+					// $('.jsError').slideToggle();
+					// setTimeout("$('.jsError').slideToggle(500);",4000 );
+					toastr.error('Vous êtes déjà abonné à cette catégorie de produits')
 				}else{
 					$scope.productId = '';
 					$('#notifModal').modal('hide');
-					$('.jsSuccess').text("Vous serez prévenu lorsqu'un produit semblable sera disponible !");
-					$('.jsSuccess').slideToggle();
-					setTimeout("$('.jsSuccess').slideToggle(500);",4000 );
+					// $('.jsSuccess').text("Vous serez prévenu lorsqu'un produit semblable sera disponible !");
+					// $('.jsSuccess').slideToggle();
+					// setTimeout("$('.jsSuccess').slideToggle(500);",4000 );
+					toastr.success('Vous serez prévenu lorsqu\'un produit semblable sera disponible !');
 				}
 			})
 			.error(function(data) {

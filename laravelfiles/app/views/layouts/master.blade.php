@@ -9,11 +9,13 @@
         <link rel="stylesheet" href="http://www.lateliermac.com/fancybox/source/jquery.fancybox.css" type="text/css" media="screen" />
         <link rel="icon" href="http://lateliermac.com/img/atelierpng.ico" />
         {{HTML::style('css/bootstrap.css') }}
+        {{HTML::style('css/toastr.min.css') }}
         {{HTML::style('css/main.css') }}
         <!-- LIBS -->
         {{HTML::script('js/jquery.js')}}
         <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.0/jquery.scrollTo.min.js"></script>
         {{HTML::script('js/bootstrap.js') }}
+        {{HTML::script('js/toastr.min.js') }}
         <script src="http://www.lateliermac.com/fancybox/source/jquery.fancybox.js"></script>
         <script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
         {{HTML::script('js/angular.min.js') }}
