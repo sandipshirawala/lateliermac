@@ -1,6 +1,6 @@
 angular.module('mainCtrl', [])
 
-.controller('mainController', function($scope, $http, Product) {
+.controller('mainController', function($scope, $http, $stateParams, Product) {
 
 	// Declare mes variables
 	$scope.commentData = {};
@@ -9,6 +9,19 @@ angular.module('mainCtrl', [])
 	$scope.subData = {};
 	$scope.loading = true;
 	$scope.email = '';
+	$scope.categories = {
+			ordinateurs: 1,
+			tablettes: 2,
+			pieces: 3,
+			accessoires: 4,
+	};
+	$scope.categoriesNames = {
+			1: "ordinateurs",
+			2: "tablettes",
+			3: "pieces",
+			4: "accessoires",
+	}
+
 
 	var uri = window.location.href.split("/");
 	var value = uri[6];
@@ -31,7 +44,6 @@ angular.module('mainCtrl', [])
 		});
 	};
 
-
 	/**
 	* Affiche les threads par sous_catégorie
 	* @return data
@@ -44,53 +56,67 @@ angular.module('mainCtrl', [])
 			.success(function(getData){
 				$scope.products = getData;
 				$('.prodindex').fadeIn();
-				$('.carousel').carousel();
 				$('.tab1').fadeIn();
 			})
 			.error(function(data){
 				console.log(data);
 			});
-		}else{
-			Product.getproducts(id)
-			.success(function(getData){
-				$scope.products = getData;
-				$('.prodindex').fadeIn();
-				$('.carousel').carousel();
-				$('.tab1').fadeIn();
-			})
-			.error(function(data){
-				console.log(data);
-			});
+		} else {
+			if(id) {
+				Product.getproducts(id)
+				.success(function(getData){
+					$scope.products = getData;
+					$('.prodindex').fadeIn();
+					$('.tab1').fadeIn();
+				})
+				.error(function(data){
+					console.log(data);
+				});
+			} else {
+					var category = $stateParams.category;
+					if(!category || undefined == category) {
+							category = "ordinateurs";
+					}
+					var key = $scope.categories[category];
+					Product.getproducts(key)
+					.success(function(getData){
+						$scope.products = getData;
+						$('.prodindex').fadeIn();
+						$('.tab1').fadeIn();
+					})
+					.error(function(data){
+						console.log(data);
+					});
+			}
 		}
 	};
 
 
-/*
-* ADMIN
-*/
-
+	/*
+	 * ADMIN
+	 */
 	$scope.editByProductId = function(id){
-			document.location.href="http://www.lateliermac.com/products/"+id+"/edit";
+			document.location.href = window.location.origin + "/products/"+id+"/edit";
 	};
 
 	$scope.editNew = function(id){
-			document.location.href="http://www.lateliermac.com/news/"+id+"/edit";
+			document.location.href = window.location.origin + "/news/"+id+"/edit";
 	};
 
 	$scope.deleteNew = function(id){
-			document.location.href="http://www.lateliermac.com/admin/news/delete/"+id;
+			document.location.href = window.location.origin + "/admin/news/delete/"+id;
 	};
 
 	$scope.showNew = function(id){
-			document.location.href="http://www.lateliermac.com/news/"+id;
+			document.location.href = window.location.origin + "/news/"+id;
 	};
 
 	$scope.showByProductId = function(id){
-			document.location.href="http://www.lateliermac.com/products/"+id;
+			document.location.href = window.location.origin + "/products/"+id;
 	};
 
 	$scope.deleteByProductId = function(id){
-			document.location.href="http://www.lateliermac.com/admin/delete/"+id;
+			document.location.href= window.location.origin + "/admin/delete/"+ id;
 	};
 
 	/**
@@ -104,20 +130,13 @@ angular.module('mainCtrl', [])
 		Product.subscribe($scope.productId, $scope.email)
 			.success(function(data) {
 				if(!data.email){
-					console.log(data);
 					$scope.notif =
 					$scope.productId = '';
 					$('#notifModal').modal('hide');
-					// $('.jsError').text('Vous êtes déjà abonné à cette catégorie de prduits');
-					// $('.jsError').slideToggle();
-					// setTimeout("$('.jsError').slideToggle(500);",4000 );
 					toastr.error('Vous êtes déjà abonné à cette catégorie de produits')
 				}else{
 					$scope.productId = '';
 					$('#notifModal').modal('hide');
-					// $('.jsSuccess').text("Vous serez prévenu lorsqu'un produit semblable sera disponible !");
-					// $('.jsSuccess').slideToggle();
-					// setTimeout("$('.jsSuccess').slideToggle(500);",4000 );
 					toastr.success('Vous serez prévenu lorsqu\'un produit semblable sera disponible !');
 				}
 			})
@@ -153,6 +172,10 @@ angular.module('mainCtrl', [])
 		.error(function(data) {
 			console.log(data);
 		});
+	};
+
+	$scope.getCategoryName = function(categoryId) {
+			return $scope.categoriesNames[categoryId];
 	};
 
 });

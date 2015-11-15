@@ -16,6 +16,7 @@
         {{HTML::script('js/angular.min.js') }}
         <script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
         {{HTML::script('js/services/sortable.js') }}
+        {{HTML::script('js/services/bootstrap.js') }}
         <script>
         $(function() {
             $("#sortable" ).sortable();
@@ -68,15 +69,15 @@
             </nav>
         </div>
     </div>
- @if(Session::has('message'))
-    <p class="text-center alert alert-success">{{ Session::get('message') }}</p>
- @elseif(Session::has('error'))
-    <p class="text-center alert alert-danger">{{ Session::get('error') }}</p>
-@endif
+     @if(Session::has('message'))
+        <p class="text-center alert alert-success">{{ Session::get('message') }}</p>
+     @elseif(Session::has('error'))
+        <p class="text-center alert alert-danger">{{ Session::get('error') }}</p>
+    @endif
     <div id="page-content-wrapper">
         <div class="page-content inset" data-spy="scroll" data-target="#spy">
             <div class="row">
-    @yield('content')
+                @yield('content')
             </div>
         </div>
     </div>

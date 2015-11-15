@@ -327,5 +327,8 @@
         <span class='st_sharethis_large' displayText='ShareThis'></span><br>
     </div>
 </div>
-
+<!-- ShareThis-->
+<script type="text/javascript">var switchTo5x=true;</script>
+<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+<script type="text/javascript">stLight.options({publisher: "8f49948b-f772-44d4-9f3c-dae8a57700bb", doNotHash: false, onhover: false, doNotCopy: false, hashAddressBar: false});</script>
 @stop

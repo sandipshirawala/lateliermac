@@ -43,5 +43,11 @@ Route::group(['before' => 'auth', 'prefix' => 'admin'], function(){
 Route::get('getproducts/{id}', ['uses' => 'ProductsController@getProductsByCategory'])->where('id', $id);
 
 //Ressources
-Route::resource('products', 'ProductsController', ['except' => [ 'destroy']]);
+Route::resource('products', 'ProductsController', ['except' => [ 'destroy', 'show']]);
 Route::resource('news', 'NewsController', ['except' => ['create', 'destroy', 'store']]);
+Route::get('products/{category}', function()
+{
+		return View::make('products.index');
+})
+->where('category', '[A-Za-z]+');
+Route::get('products/{id}', ['uses' => 'ProductsController@show'])->where('id', '[0-9]+');

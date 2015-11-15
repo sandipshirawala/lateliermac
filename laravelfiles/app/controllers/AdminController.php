@@ -22,7 +22,6 @@ class AdminController extends \BaseController {
 		return View::make('admin.news')->with('news', $news);
 	}
 
-
 	/**
 	 * Display the specified resource.
 	 *

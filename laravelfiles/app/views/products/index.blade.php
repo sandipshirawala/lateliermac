@@ -1,70 +1,29 @@
 @extends('layouts.master')
 
 @section('content')
+<base href="/products/" />
 <div class="all" style="margin-top:1% !important;">
     <div class="categoriesmenu">
         <div class="form-group searchInput">
             <input type="text" name="name" class="form-control" placeholder="Recherche ..." autocomplete="off" ng-model="query.name">
         </div>
         <div class="list-group">
-            <span class="list-group-item" ng-click="getProductsByCat(1)">
+            <span class="list-group-item" ui-sref="category({ category: 'ordinateurs' })">
                 <i class="flaticon-imac"></i> Macs
             </span>
-            <span href="#" class="list-group-item" ng-click="getProductsByCat(2)">
+            <span href="#" class="list-group-item" ui-sref="category({ category: 'tablettes' })">
                 <i class="flaticon-computer71"></i> iPads
             </span>
-            <span href="#" class="list-group-item" ng-click="getProductsByCat(3)">
+            <span href="#" class="list-group-item" ui-sref="category({ category: 'pieces' })">
                 <i class="flaticon-settings48"></i> Pièces détachées
             </span>
-            <span href="#" class="list-group-item" ng-click="getProductsByCat(4)">
+            <span href="#" class="list-group-item" ui-sref="category({ category: 'accessoires' })">
                 <i class="flaticon-suitcase17"></i> Accessoires
             </span>
         </div>
     </div>
-    <div class="container prodindex">
-        <!-- Begin of rows -->
-        <div class="row carousel-row" ng-repeat="product in products | filter: query">
-            <div class="col-xs-8 col-xs-offset-2 slide-row">
-                <div class="carousel slide slide-carousel" data-ride="carousel">
-                  <!-- Wrapper for slides -->
-                  <div class="carousel-inner">
-                    <div class="item active">
-                        <a href="{{ URL::to('uploads/<%product.id%>/<%product.photo1%>') }}" class="fancybox" rel="<% product.id %>">
-                            <img ng-src="{{ URL::to('uploads/<%product.id%>/<%product.photo1%>') }}" alt="Image">
-                        </a>
-                    </div>
-                    <div class="item">
-                        <a href="{{ URL::to('uploads/<%product.id%>/<%product.photo2%>') }}" class="fancybox"  rel="<% product.id %>">
-                            <img ng-src="{{ URL::to('uploads/<%product.id%>/<%product.photo2%>') }}" alt="Image">
-                        </a>
-                    </div>
-                    <div class="item">
-                        <a href="{{ URL::to('uploads/<%product.id%>/<%product.photo3%>') }}" class="fancybox"  rel="<% product.id %>">
-                            <img ng-src="{{ URL::to('uploads/<%product.id%>/<%product.photo3%>') }}" alt="Image">
-                        </a>
-                    </div>
-                  </div>
-                </div>
-                <div class="slide-content">
-                    <h4>
-                      <% product.name %>
-                    </h4>
-                    <p>
-                        <% product.description %>
-                    </p>
-                </div>
-                <div class="slide-footer">
-                    <span class="pricelab label label-primary label-lg">
-                      <% product.prix %> €
-                    </span>
-                    &nbsp;
-                    <a style="font-size: 13px!important;line-height: 1.3;" href="#" class="btn btn-default btn-sm" ng-if="product.prix == 0" ng-click="notifForm(product.id)" data-toggle="modal" data-target="#notifModal">Me prévenir si ce produit est à nouveau disponible</a>
-                    <span class="pull-right buttons">
-                        <button ng-click="showByProductId(product.id)" class="btn btn-sm btn-primary more"><i class="fa fa-fw fa-eye"></i> Voir +</button>
-                    </span>
-                </div>
-            </div>
-        </div>
+    <div ui-view>
+
     </div>
 </div>
 <div class="modal fade newprod" id="notifModal" tabindex="-1" role="dialog" aria-labelledby="notifModalLabel" aria-hidden="true">

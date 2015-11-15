@@ -20,6 +20,7 @@
         <script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
         {{HTML::script('js/angular.min.js') }}
         {{HTML::script('js/services/sortable.js') }}
+        {{HTML::script('js/services/ui-router.min.js') }}
         <!-- SCRIPTS -->
         {{HTML::script('js/script.js') }}
         {{HTML::script('js/controllers/mainCtrl.js') }}
@@ -124,9 +125,5 @@
                 </p>
             </footer>
         </div>
-        <!-- ShareThis-->
-        <script type="text/javascript">var switchTo5x=true;</script>
-        <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
-        <script type="text/javascript">stLight.options({publisher: "8f49948b-f772-44d4-9f3c-dae8a57700bb", doNotHash: false, onhover: false, doNotCopy: false, hashAddressBar: false});</script>
     </body>
 </html>
