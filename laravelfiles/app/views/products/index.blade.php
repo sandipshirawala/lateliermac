@@ -35,7 +35,7 @@
       </div>
       <div class="modal-body">
         <div class="form-group">
-          <input name="email" type="text" ng-model="email" placeholder="Votre adresse email ..."  class="form-control">
+          <input id="subscriber" name="email" type="text" ng-model="email" placeholder="Votre adresse email ..."  class="form-control">
         </div>
         <div class="form-group">
           <button type="submit" ng-click="notifyMe()" class="btn btn-primary">Envoyer</button>
@@ -47,6 +47,9 @@
 <script>
     $(function(){
         $('.fancybox').fancybox();
+        $('#notifModal').on('shown.bs.modal', function () {
+            $('#subscriber').focus();
+        });
     });
 </script>
 @stop
