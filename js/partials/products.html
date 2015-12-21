@@ -1,8 +1,13 @@
-<div class="container prodindex" ng-init="getProductsByCat()">
+<div class="container prodindex" ng-init="getProductsByCat();reloadCarousel()">
     <!-- Begin of rows -->
     <div class="row carousel-row" ng-repeat="product in products | filter: query">
         <div class="col-xs-8 col-xs-offset-2 slide-row">
-            <div class="carousel slide slide-carousel">
+            <div id="carousel" class="carousel slide slide-carousel" data-ride="carousel">
+              <ol class="carousel-indicators">
+                <li data-target="#carousel" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel" data-slide-to="1"></li>
+                <li data-target="#carousel" data-slide-to="2"></li>
+              </ol>
               <!-- Wrapper for slides -->
               <div class="carousel-inner">
                 <div class="item active">

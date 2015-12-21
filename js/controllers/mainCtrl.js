@@ -1,6 +1,6 @@
 angular.module('mainCtrl', [])
 
-.controller('mainController', function($scope, $http, $stateParams, Product) {
+.controller('mainController', function($scope, $http, $timeout, $stateParams, Product) {
 
 	// Declare mes variables
 	$scope.commentData = {};
@@ -21,7 +21,6 @@ angular.module('mainCtrl', [])
 			3: "pieces",
 			4: "accessoires",
 	}
-
 
 	var uri = window.location.href.split("/");
 	var value = uri[6];
@@ -49,48 +48,57 @@ angular.module('mainCtrl', [])
 	* @return data
 	**/
 	$scope.getProductsByCat = function(id){
-		$('.prodindex').hide();
-		$('.tab1').hide();
-		if(window.location.pathname == '/admin/products'){
-			Product.getadmproducts(id)
-			.success(function(getData){
-				$scope.products = getData;
-				$('.prodindex').fadeIn();
-				$('.tab1').fadeIn();
-			})
-			.error(function(data){
-				console.log(data);
-			});
-		} else {
-			if(id) {
-				Product.getproducts(id)
-				.success(function(getData){
-					$scope.products = getData;
-					$('.prodindex').fadeIn();
-					$('.tab1').fadeIn();
-				})
-				.error(function(data){
-					console.log(data);
-				});
-			} else {
-					var category = $stateParams.category;
-					if(!category || undefined == category) {
-							category = "ordinateurs";
-					}
-					var key = $scope.categories[category];
-					Product.getproducts(key)
+			$('.prodindex').hide();
+			$('.tab1').hide();
+			if(window.location.pathname == '/admin/products') {
+					Product.getadmproducts(id)
 					.success(function(getData){
-						$scope.products = getData;
-						$('.prodindex').fadeIn();
-						$('.tab1').fadeIn();
+							$scope.products = getData;
+							$('.prodindex').fadeIn();
+							$('.carousel').carousel();
+							$('.tab1').fadeIn();
 					})
 					.error(function(data){
 						console.log(data);
 					});
+			} else {
+					if(id) {
+						Product.getproducts(id)
+						.success(function(getData){
+								$scope.products = getData;
+								$('.prodindex').fadeIn();
+								$('.carousel').carousel();
+								$('.tab1').fadeIn();
+						})
+						.error(function(data){
+								console.log(data);
+						});
+					} else {
+							var category = $stateParams.category;
+							if(!category || undefined == category) {
+									category = "ordinateurs";
+							}
+							var key = $scope.categories[category];
+							Product.getproducts(key)
+							.success(function(getData){
+									$scope.products = getData;
+									$('.prodindex').fadeIn();
+									$('.tab1').fadeIn();
+							})
+							.error(function(data){
+									console.log(data);
+							});
+					}
 			}
-		}
 	};
 
+	$scope.reloadCarousel = function() {
+			$timeout(function() {
+					$('.carousel').carousel();
+					if (!$scope.$$phase)
+							$scope.$apply();
+			}, 1000);
+	};
 
 	/*
 	 * ADMIN
