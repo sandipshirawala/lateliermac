@@ -1,12 +1,12 @@
 <div class="container prodindex" ng-init="getProductsByCat();reloadCarousel()">
     <!-- Begin of rows -->
-    <div class="row carousel-row" ng-repeat="product in products | filter: query">
+    <div class="row carousel-row" ng-repeat="product in products track by $index| filter: query">
         <div class="col-xs-8 col-xs-offset-2 slide-row">
             <div id="carousel" class="carousel slide slide-carousel" data-ride="carousel">
               <ol class="carousel-indicators">
                 <li data-target="#carousel" data-slide-to="0" class="active"></li>
-                <li data-target="#carousel" data-slide-to="1"></li>
-                <li data-target="#carousel" data-slide-to="2"></li>
+                <li ng-if="product.photo2" data-target="#carousel" data-slide-to="1"></li>
+                <li ng-if="product.photo3" data-target="#carousel" data-slide-to="2"></li>
               </ol>
               <!-- Wrapper for slides -->
               <div class="carousel-inner">
@@ -15,12 +15,12 @@
                         <img ng-src="http://lateliermac.com/uploads/<%product.id%>/<%product.photo1%>" alt="Image">
                     </a>
                 </div>
-                <div class="item">
+                <div class="item" ng-if="product.photo2">
                     <a href="http://lateliermac.com/uploads/<%product.id%>/<%product.photo2%>" class="fancybox"  rel="<% product.id %>">
                         <img ng-src="http://lateliermac.com/uploads/<%product.id%>/<%product.photo2%>" alt="Image">
                     </a>
                 </div>
-                <div class="item">
+                <div class="item" ng-if="product.photo3">
                     <a href="http://lateliermac.com/uploads/<%product.id%>/<%product.photo3%>" class="fancybox"  rel="<% product.id %>">
                         <img ng-src="http://lateliermac.com/uploads/<%product.id%>/<%product.photo3%>" alt="Image">
                     </a>

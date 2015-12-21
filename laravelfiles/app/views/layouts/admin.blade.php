@@ -14,6 +14,7 @@
         {{HTML::script('js/jquery.js')}}
         {{HTML::script('js/bootstrap.js') }}
         {{HTML::script('js/angular.min.js') }}
+        {{HTML::script('js/services/ui-router.min.js') }}
         <script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
         {{HTML::script('js/services/sortable.js') }}
         {{HTML::script('js/services/bootstrap.js') }}
