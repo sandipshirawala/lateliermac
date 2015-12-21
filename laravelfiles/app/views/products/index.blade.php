@@ -7,7 +7,7 @@
         <div class="form-group searchInput">
             <input type="text" name="name" class="form-control" placeholder="Recherche ..." autocomplete="off" ng-model="query.name">
         </div>
-        <div class="list-group">
+        <div class="list-group" id="productsMenu">
             <span class="list-group-item" ui-sref="category({ category: 'ordinateurs' })">
                 <i class="flaticon-imac"></i> Macs
             </span>
@@ -22,9 +22,7 @@
             </span>
         </div>
     </div>
-    <div ui-view>
-
-    </div>
+    <div ui-view id="uiView"></div>
 </div>
 <div class="modal fade newprod" id="notifModal" tabindex="-1" role="dialog" aria-labelledby="notifModalLabel" aria-hidden="true">
   <div class="modal-dialog">

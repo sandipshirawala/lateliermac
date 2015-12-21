@@ -2,9 +2,10 @@ var productApp = angular.module('productApp', ['mainCtrl', 'productService', 'ui
         $interpolateProvider.startSymbol('<%');
         $interpolateProvider.endSymbol('%>');
 	});
-productApp.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
+productApp.config(function($stateProvider, $urlRouterProvider, $locationProvider, $httpProvider) {
     $urlRouterProvider.otherwise("/");
     $locationProvider.html5Mode(true);
+    $httpProvider.defaults.cache = true;
 
     $stateProvider
       .state('productsHome', {

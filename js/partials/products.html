@@ -2,11 +2,11 @@
     <!-- Begin of rows -->
     <div class="row carousel-row" ng-repeat="product in products track by $index| filter: query">
         <div class="col-xs-8 col-xs-offset-2 slide-row">
-            <div id="carousel" class="carousel slide slide-carousel" data-ride="carousel">
+            <div id="carousel-<% product.id %>" class="carousel slide slide-carousel" data-ride="carousel">
               <ol class="carousel-indicators">
-                <li data-target="#carousel" data-slide-to="0" class="active"></li>
-                <li ng-if="product.photo2" data-target="#carousel" data-slide-to="1"></li>
-                <li ng-if="product.photo3" data-target="#carousel" data-slide-to="2"></li>
+                <li data-target="#carousel-<% product.id %>" data-slide-to="0" class="active"></li>
+                <li ng-if="product.photo2" data-target="#carousel-<% product.id %>" data-slide-to="1"></li>
+                <li ng-if="product.photo3" data-target="#carousel-<% product.id %>" data-slide-to="2"></li>
               </ol>
               <!-- Wrapper for slides -->
               <div class="carousel-inner">

@@ -617,13 +617,22 @@
       .devis{display:none;}
       .resp-bar{display:block; width:97% !important}
       .pannefb,.vert,.rouge,.turquoise{height: 355px}
+      #productsMenu {
+        width: 100%;
+        display:flex!important;
+      }
+      #uiView .container{
+        max-width: none!important;
+      }
+      .prodindex{ width: 125%!important}
+      .searchInput{ width: 85%!important}
   }
   @media only screen and (min-width: 812px) {
 
       .productOnly {
           margin-top: 15px;
       }
-
+      .searchInput{ width: 214px}
       .resp-bar {display:none}
       /* ====================
       WIDE: CSS3 Effects
@@ -744,6 +753,11 @@
       /* ===============
       Maximal Width
       =============== */
+      #productsMenu {
+          width: 214px;
+          display: block;
+      }
+
       #formcont{
           width: 176%;
       }
@@ -820,6 +834,9 @@
       .all{
           display:flex;
       }
+      .carousel-row {
+        width: 80%;
+      }
   }
 
   @media only screen and (min-width: 1512px) {
@@ -827,7 +844,10 @@
       /* ===============
       Maximal Width
       =============== */
-
+      #productsMenu {
+          width: 214px;
+          display: block;
+      }
       .imac{
           padding-top: 0px;
           width: 45%;
@@ -1726,4 +1746,8 @@
 
 #sharethis-alt:hover {
   cursor: pointer;
+}
+
+#uiView {
+  width: 70%!important;
 }
