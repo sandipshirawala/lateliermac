@@ -2,6 +2,10 @@ $(document).ready(function(){
     if($('.alert').css('display') != "none"){
       setTimeout("$('.alert').slideToggle(500);",4000 );
     }
+
+    $('#sharethis-alt').click(function(){
+        $('.stLarge').trigger('click');
+    });
 });
 
 $(function(){

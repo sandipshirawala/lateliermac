@@ -324,9 +324,17 @@
         <a href="https://fr.linkedin.com/pub/j%C3%A9rome-chalas/24/6a6/184" target="_blank"><i class="social fa fa-linkedin-square fa-3x social-lk"></i></a> <br>
         <a href="https://plus.google.com/u/0/102328922603950184450" target="_blank"><i class="social fa fa-google-plus-square fa-3x social-gp"></i></a> <br>
         <a href="mailto:contact@lateliermac.com"><i class="social fa fa-envelope-square fa-3x social-em"></i></a><br>
-        <span class='st_sharethis_large' displayText='ShareThis'></span><br>
+        <a id="sharethis-alt"><i class="social fa fa-share-alt-square fa-3x social-share"></i></a><br>
+        <span style="display: none!important" class='st_sharethis_large' displayText='ShareThis'></span><br>
     </div>
 </div>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#sharethis-alt').click(function(){
+            $('.stLarge').trigger('click');
+        });
+    });
+</script>
 <!-- ShareThis-->
 <script type="text/javascript">var switchTo5x=true;</script>
 <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>

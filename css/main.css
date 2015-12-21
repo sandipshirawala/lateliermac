@@ -1255,8 +1255,9 @@
   .social-em:hover {
       color: #f39c12;
   }
-
-
+  .social-share:hover {
+      color: #217837;
+  }
 
   .pophoraires, .popcontact, .popplan{
       display: none;
@@ -1721,4 +1722,8 @@
 
 #item-display {
 	max-height: 246px;
+}
+
+#sharethis-alt:hover {
+  cursor: pointer;
 }
