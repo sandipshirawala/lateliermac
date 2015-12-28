@@ -22,7 +22,7 @@ class Product extends Eloquent{
         $jour = array('Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi', 'Dimanche');
         $mois = array('Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre');
         $date=$jour[date("N",$tmstamp)-1]." ".date("d",$tmstamp)." ".$mois[date("n",$tmstamp)-1]." ".date("Y",$tmstamp);
-        if($heure==true){
+        if ($heure==true){
             $date.=" à".date("H:i:s",$tmstamp);
         }
         return ($date);

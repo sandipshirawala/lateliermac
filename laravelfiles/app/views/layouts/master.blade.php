@@ -29,9 +29,9 @@
 
     </head>
     <body ng-app="productApp" ng-controller="mainController">
-        @if(Session::has('message'))
+        @if (Session::has('message'))
             <p class="text-center alert alert-success">{{ Session::get('message') }}</p>
-        @elseif(Session::has('error'))
+        @elseif (Session::has('error'))
             <p class="text-center alert alert-danger">{{ Session::get('error') }}</p>
         @endif
 

@@ -9,7 +9,7 @@
                 <div class="carousel slide slide-carousel" data-ride="carousel">
                   <!-- Wrapper for slides -->
                   <div class="carousel-inner">
-                    @if(!is_null($new->file))
+                    @if (!is_null($new->file))
                     <div class="item active">
                         <a href="{{ URL::to('presse/'.$new->id.'/'.$new->file) }}" class="fancybox" rel="<% product.id %>">
                             <img src="{{ URL::to('presse/'.$new->id.'/'.$new->file) }}" alt="Image">
@@ -19,8 +19,8 @@
                   </div>
                 </div>
                 <div class="slide-content">
-                    <h4 @if(is_null($new->file)) style="margin-left: -30% !important;" @endif class="text-center">{{ $new->name }}</h4>
-                    <p @if(is_null($new->file)) style="margin-left: -30% !important;" @endif>{{ substr($new->content, 0, 200) }} <br>[...]</p>
+                    <h4 @if (is_null($new->file)) style="margin-left: -30% !important;" @endif class="text-center">{{ $new->name }}</h4>
+                    <p @if (is_null($new->file)) style="margin-left: -30% !important;" @endif>{{ substr($new->content, 0, 200) }} <br>[...]</p>
                 </div>
                 <div class="slide-footer">
                     <span class="pull-right buttons">

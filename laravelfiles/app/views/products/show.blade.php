@@ -21,12 +21,12 @@
                   <img src="http://lateliermac.com/uploads/{{$product->id}}/{{$product->photo1}}" alt="img">
               </a>
               <a id="item-2" href="http://lateliermac.com/uploads/{{$product->id}}/{{$product->photo2}}" class="fancybox service2-item" rel="gallery">
-                  @if(!empty($product->photo2) && !is_null($product->photo2))
+                  @if (!empty($product->photo2) && !is_null($product->photo2))
                       <img src="http://lateliermac.com/uploads/{{$product->id}}/{{$product->photo2}}" alt="img">
                   @endif
               </a>
               <a id="item-3" href="http://lateliermac.com/uploads/{{$product->id}}/{{$product->photo3}}" class="service3-item fancybox" rel="gallery">
-                  @if(!empty($product->photo3) && !is_null($product->photo3))
+                  @if (!empty($product->photo3) && !is_null($product->photo3))
                       <img src="http://lateliermac.com/uploads/{{$product->id}}/{{$product->photo3}}" alt="img">
                   @endif
               </a>

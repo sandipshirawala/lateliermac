@@ -9,7 +9,7 @@
         <hr>
     <div>
         <p class="newscontent">{{ $news->content }}</p>
-        @if(!is_null($news->file))
+        @if (!is_null($news->file))
           <img class=" newphoto" src="{{ URL::to('presse/'.$news->id.'/'.$news->file) }}" alt="">
         @endif
     </div>
