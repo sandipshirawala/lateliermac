@@ -9,6 +9,8 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 
 	use UserTrait, RemindableTrait;
 
+    // Accessible properties
+    // Can be edited
     protected $fillable = array('role_id', 'password', 'username','email', 'confirmed', 'confirmation_code');
 
 	public static $rules = array(
