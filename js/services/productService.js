@@ -3,7 +3,7 @@ angular.module('productService', [])
 	.factory('Product', function($http) {
 		return {
 			getproducts : function(id){
-				return $http.get('/getproducts/' + id);
+				return $http.get('/getproducts/' + id, { cache: true });
 			},
 			getadmproducts : function(id){
 				return $http.get('/admin/getproducts/' + id);

@@ -404,6 +404,8 @@
   ========================================================================== */
   @media only screen and (max-width: 480px) {
 
+      .slide-content{ display:none!important;}
+
       /* ====================
       INTERMEDIATE: Menu
       ==================== */

@@ -18,10 +18,6 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
         'password_confirmation'=>'required|alpha_num|between:2,12'
     );
 
-
-	// public function user(){
-	// 	return $this->belongsTo->('Role');
-	// }
 	/**
 	 * The database table used by the model.
 	 *
